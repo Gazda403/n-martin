@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html lang="sr-Latn">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>N-Martin | Arhitektonski Studio — Nikola Martinović</title>
+  <meta name="description" content="Arhitektonski biro N-Martin iz Novog Sada, osnovan 2005. godine pod vođstvom Nikole Martinovića. Projektovanje stambenih i poslovnih objekata, enterijer i urbanizam." />
+  <meta property="og:title" content="N-Martin Arhitektonski Studio — Nikola Martinović" />
+  <meta property="og:description" content="Projektovanje stambenih, poslovnih i javnih objekata u Srbiji, regionu i SAD. Preko 150 realizovanih projekata od 2005. godine." />
+  <meta property="og:type" content="website" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;0,900;1,400;1,600;1,700;1,800&family=Syne:wght@400;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%231A1916'/><text x='50%' y='55%' dominant-baseline='middle' text-anchor='middle' fill='%23B8945A' font-family='serif' font-size='18' font-weight='bold'>N</text></svg>" />
+
+  <link rel="stylesheet" href="style.css?v=14" />
+</head>
+<body>
+
+  <!-- ── CUSTOM CURSOR ── -->
+  <div class="cursor" id="cursor">
+    <div class="cursor__ring"></div>
+    <div class="cursor__dot"></div>
+  </div>
+
+  <!-- ── LOADER ── -->
+  <div class="loader" id="loader">
+    <div class="loader__inner" id="loaderInner">
+      <div class="loader__square-wrap">
+        <div class="loader__square" id="loaderSquare"></div>
+      </div>
+      <div class="loader__logo">
+        <span class="loader__n">N</span><span class="loader__dash">—</span><span class="loader__martin">MARTIN</span>
+      </div>
+      <div class="loader__bar"><div class="loader__fill"></div></div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════
+       NAVIGACIJA
+  ══════════════════════════════════════ -->
+  <nav class="nav" id="nav">
+    <a href="#" class="nav__logo" aria-label="N-Martin Početna">
+      <span class="nav__logo-n">N</span><span class="nav__logo-dash">—</span><span class="nav__logo-martin">MARTIN</span>
+    </a>
+    <div class="nav__meta">
+      <span class="nav__location">Arhitektonski Biro · Novi Sad · Osnovan 2005.</span>
+    </div>
+    <ul class="nav__links">
+      <li><a href="#projekti" class="nav__link">Projekti</a></li>
+      <li><a href="#studio" class="nav__link">Studio</a></li>
+      <li><a href="#usluge" class="nav__link">Usluge</a></li>
+      <li><a href="#kontakt" class="nav__link">Kontakt</a></li>
+    </ul>
+    <button class="nav__hamburger" id="hamburger" aria-label="Otvori navigacioni meni">
+      <span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Mobilni Meni -->
+  <div class="mobile-menu" id="mobileMenu">
+    <ul class="mobile-menu__links">
+      <li><a href="#projekti" class="mobile-menu__link">Projekti</a></li>
+      <li><a href="#studio" class="mobile-menu__link">Studio</a></li>
+      <li><a href="#usluge" class="mobile-menu__link">Usluge</a></li>
+      <li><a href="#kontakt" class="mobile-menu__link">Kontakt</a></li>
+    </ul>
+    <div class="mobile-menu__footer">
+      <a href="http://www.facebook.com/pages/N-martin-architectural-studio/144999842182833" target="_blank" rel="noopener noreferrer">Facebook</a>
+      <a href="http://www.linkedin.com/pub/nikola-martinovic/6/58b/953" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <a href="http://www.architizer.com/en_us/firms/view/n-martin/9493/" target="_blank" rel="noopener noreferrer">Architizer</a>
+    </div>
+  </div>
+
+  <main>
+
+    <!-- ══════════════════════════════════════
+         HERO SEKCIJA — ARCHETA EDITORIAL TRIPTYCH
+    ══════════════════════════════════════ -->
+    <section class="hero hero--editorial" id="hero">
+      <div class="hero__editorial-container">
+        
+        <!-- Headline Lockup (Archeta style: balanced sans + italic serif) -->
+        <div class="hero__heading-wrap">
+          <h1 class="hero__title">
+            <span class="hero__title-sans">BEZVREMENSKA</span>
+            <em class="hero__title-serif">Arhitektura</em>
+          </h1>
+          
+          <div class="hero__sub-bar">
+            <div class="hero__disciplines">
+              <span class="hero__disciplines-label">Discipline</span>
+              <span class="hero__disciplines-list">Arhitektura · Rezidencije · Poslovni Objekti · Enterijer · Inženjering</span>
+            </div>
+            <div class="hero__coords">
+              <span>Novi Sad, Srbija · 45°15'N 19°51'E</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3-Card Interactive Triptych (Archeta multi-image layout with full photo visibility) -->
+        <div class="hero__triptych" id="heroTriptych" role="region" aria-label="Istaknuti projekti N-Martin studija">
+          
+          <!-- Card 1: KSS Office Building -->
+          <article class="hero-card hero-card--active" data-index="0" tabindex="0">
+            <div class="hero-card__media">
+              <img
+                src="hero%20images/KSS-exterijer-1-01.jpg"
+                alt="Poslovni Centar KSS Novi Sad — N-Martin"
+                class="hero-card__img"
+                loading="eager"
+              />
+              <div class="hero-card__overlay"></div>
+            </div>
+            
+            <div class="hero-card__badge">
+              <span class="hero-card__tag">01 · Poslovna Arhitektura</span>
+            </div>
+
+            <div class="hero-card__caption">
+              <div class="hero-card__meta">
+                <span class="hero-card__year">2023 · Realizovano</span>
+                <span class="hero-card__loc">Novi Sad</span>
+              </div>
+              <h2 class="hero-card__name">Poslovni Centar KSS</h2>
+              <div class="hero-card__action">
+                <a href="#projekti" class="hero-card__link">
+                  <span>Istraži projekat</span>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+              </div>
+            </div>
+            
+            <!-- Hairline Progress Indicator -->
+            <div class="hero-card__progress">
+              <div class="hero-card__progress-fill"></div>
+            </div>
+          </article>
+
+          <!-- Card 2: Fruška Gora Villa -->
+          <article class="hero-card" data-index="1" tabindex="0">
+            <div class="hero-card__media">
+              <img
+                src="hero%20images/4-785x442.jpg"
+                alt="Rezidencijalna Vila sa Bazenom Fruška Gora — N-Martin"
+                class="hero-card__img"
+                loading="eager"
+              />
+              <div class="hero-card__overlay"></div>
+            </div>
+            
+            <div class="hero-card__badge">
+              <span class="hero-card__tag">02 · Privatna Rezidencija</span>
+            </div>
+
+            <div class="hero-card__caption">
+              <div class="hero-card__meta">
+                <span class="hero-card__year">2022 · Realizovano</span>
+                <span class="hero-card__loc">Fruška Gora</span>
+              </div>
+              <h2 class="hero-card__name">Vila na Fruškoj Gori</h2>
+              <div class="hero-card__action">
+                <a href="#projekti" class="hero-card__link">
+                  <span>Istraži projekat</span>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+              </div>
+            </div>
+
+            <div class="hero-card__progress">
+              <div class="hero-card__progress-fill"></div>
+            </div>
+          </article>
+
+          <!-- Card 3: Sportska Dvorana Aranđelovac -->
+          <article class="hero-card" data-index="2" tabindex="0">
+            <div class="hero-card__media">
+              <img
+                src="hero%20images/1-1.jpg"
+                alt="Gradska Sportska Dvorana Aranđelovac — N-Martin"
+                class="hero-card__img"
+                loading="eager"
+              />
+              <div class="hero-card__overlay"></div>
+            </div>
+            
+            <div class="hero-card__badge">
+              <span class="hero-card__tag">03 · Javni Objekat</span>
+            </div>
+
+            <div class="hero-card__caption">
+              <div class="hero-card__meta">
+                <span class="hero-card__year">2021 · Javni Konkurs</span>
+                <span class="hero-card__loc">Aranđelovac</span>
+              </div>
+              <h2 class="hero-card__name">Sportska Dvorana</h2>
+              <div class="hero-card__action">
+                <a href="#projekti" class="hero-card__link">
+                  <span>Istraži projekat</span>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+              </div>
+            </div>
+
+            <div class="hero-card__progress">
+              <div class="hero-card__progress-fill"></div>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- Editorial side index marker -->
+        <div class="hero__side-index" aria-hidden="true">
+          <span class="hero__side-index-num" id="heroSideNum">01 / 03</span>
+          <div class="hero__side-line"></div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════
+         UVODNA IZJAVA / SAISEI 3-COLUMN EDITORIAL
+    ══════════════════════════════════════ -->
+    <section class="intro" id="o-nama">
+      <div class="container">
+        <div class="saisei-intro">
+          <!-- Col 1: Vertical typography -->
+          <div class="saisei-intro__left reveal">
+            <div class="saisei-tag">
+              <span class="saisei-tag__num">01</span>
+              <span class="saisei-tag__label">Tradicija &amp; Zanat</span>
+              <span class="saisei-tag__sub">Novi Sad, 2005.</span>
+            </div>
+            <h2 class="saisei-intro__title">
+              <span>Svaki</span>
+              <span>red</span>
+              <span>govori</span>
+              <em>svoju priču.</em>
+            </h2>
+          </div>
+
+          <!-- Col 2: Featured tall portrait photograph -->
+          <div class="saisei-intro__center reveal delay-1">
+            <div class="saisei-intro__img-frame">
+              <img
+                class="saisei-intro__img"
+                src="https://www.nmartinproject.com/wp-content/uploads/2021/02/Citaonica-145x145.jpg"
+                data-src="https://www.nmartinproject.com/wp-content/uploads/2021/02/Citaonica.jpg"
+                alt="Arhitektonski detalj enterijera — N-Martin"
+                onerror="this.src='https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=900&q=80'"
+              />
+              <div class="saisei-intro__caption">
+                <span>Čitaonica Svetozar Miletić</span>
+                <span>Novi Sad</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Col 3: Editorial text, pill CTA, and detail photo -->
+          <div class="saisei-intro__right reveal delay-2">
+            <p class="saisei-intro__text">
+              U svakom projektu biroa N-Martin, arhitektura je promišljen dijalog između funkcije, statike i prirodnog svetla. Od 2005. godine u Novom Sadu gradimo prostore koji odolevaju prolaznim trendovima — sa jasnim linijama, prirodnim materijalima i nepokolebljivom preciznošću.
+            </p>
+            <p class="saisei-intro__subtext">
+              Vodimo projekte kroz sve faze: od urbanističkih analiza i idejnog koncepta, preko statike i dozvola, do unikatnog enterijera i strogog autorskog nadzora na gradilištu.
+            </p>
+            <div class="saisei-intro__action">
+              <a href="#studio" class="btn btn--pill">O Studiju <span class="btn__arrow">→</span></a>
+            </div>
+            <div class="saisei-intro__secondary-img-wrap">
+              <img
+                class="saisei-intro__secondary-img"
+                src="https://www.nmartinproject.com/wp-content/uploads/2021/02/DSC6944-145x145.jpg"
+                data-src="https://www.nmartinproject.com/wp-content/uploads/2021/02/DSC6944-scaled.jpg"
+                alt="Detalj izvođenja i prirodni materijali"
+                onerror="this.src='https://images.unsplash.com/photo-1513519245088-0e12902e5a38?w=600&q=80'"
+              />
+              <span class="saisei-intro__secondary-tag">Izvođenje &amp; Detalji</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════
+         PROJEKTI
+    ══════════════════════════════════════ -->
+    <section class="projects" id="projekti">
+      <div class="container">
+        <div class="projects__headline reveal">
+          <div class="projects__headline-inner">
+            <h2 class="archeta-title">
+              <span class="archeta-title__sans">NAŠA</span>
+              <em class="archeta-title__serif">Remek-Dela</em>
+            </h2>
+            <div class="projects__headline-meta">
+              <span class="meta-label">Arhitektonski portfolio</span>
+              <a href="javascript:void(0)" class="link-arrow">Kompletan portfolio <span>→</span></a>
+            </div>
+          </div>
+
+          <!-- Archeta-style discipline filter row -->
+          <div class="projects__disciplines-bar">
+            <span class="disc-label">Kategorije:</span>
+            <div class="disc-pills">
+              <button class="disc-pill active" data-filter="all">Sve</button>
+              <button class="disc-pill" data-filter="rezidencija">Rezidencije</button>
+              <button class="disc-pill" data-filter="poslovni">Poslovni &amp; Javni</button>
+              <button class="disc-pill" data-filter="enterijer">Enterijer</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Glavni istaknuti projekat -->
+      <div class="projects__featured">
+        <a href="javascript:void(0)" class="project-card project-card--large" data-category="rezidencija">
+          <div class="project-card__img-wrap">
+            <img
+              class="project-card__img"
+              src="https://www.nmartinproject.com/wp-content/uploads/2024/06/4k-1-1-145x145.jpg"
+              data-src="https://www.nmartinproject.com/wp-content/uploads/2024/06/4k-1-1-scaled.jpg"
+              alt="Vikendica u Banoštoru — Rezidencija Fruška Gora"
+              onerror="this.src='https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=80'"
+            />
+          </div>
+          <div class="project-card__info">
+            <span class="project-card__cat">Rezidencijalna Arhitektura · Fruška Gora · 2024</span>
+            <h3 class="project-card__title">Vikendica u Banoštoru</h3>
+            <p class="project-card__desc">Kuća za odmor ukopana u padinu Fruške Gore. Kombinacija natur-betona, lokalnog kamena i hrastovih panela sa otvorenim pogledom na Dunav.</p>
+            <span class="project-card__cta">Pogledaj Detalje Projekta <span>→</span></span>
+          </div>
+        </a>
+      </div>
+
+      <!-- Mreža projekata -->
+      <div class="container">
+        <div class="projects__grid">
+
+          <a href="javascript:void(0)" class="project-card project-card--sm" data-category="rezidencija">
+            <div class="project-card__img-wrap">
+              <img class="project-card__img"
+                src="https://www.nmartinproject.com/wp-content/uploads/2021/02/DSC6944-145x145.jpg"
+                data-src="https://www.nmartinproject.com/wp-content/uploads/2021/02/DSC6944-scaled.jpg"
+                alt="Porodična Kuća Zlatibor"
+                onerror="this.src='https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80'" />
+            </div>
+            <div class="project-card__info">
+              <span class="project-card__cat">Stambeni Objekat · Zlatibor</span>
+              <h3 class="project-card__title">Porodična Kuća — Zlatibor</h3>
+              <p class="project-card__subtext">Masivna drvena konstrukcija, termoizolacija visokih performansi i krov prilagođen planinskim klimatskim uslovima.</p>
+              <span class="project-card__cta">Pogledaj <span>→</span></span>
+            </div>
+          </a>
+
+          <a href="javascript:void(0)" class="project-card project-card--sm" data-category="enterijer">
+            <div class="project-card__img-wrap">
+              <img class="project-card__img"
+                src="https://www.nmartinproject.com/wp-content/uploads/2021/02/konnect1-145x145.jpg"
+                data-src="https://www.nmartinproject.com/wp-content/uploads/2021/02/konnect1.jpg"
+                alt="Konnect Golf New York"
+                onerror="this.src='https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=600&q=80'" />
+            </div>
+            <div class="project-card__info">
+              <span class="project-card__cat">Komercijalni Enterijer · Menhetn, Njujork</span>
+              <h3 class="project-card__title">Konnect Golf New York</h3>
+              <p class="project-card__subtext">Simulator centar na Petoj Aveniji. Projektovanje prostorne akustike, zonske rasvete i pratećeg bara.</p>
+              <span class="project-card__cta">Pogledaj <span>→</span></span>
+            </div>
+          </a>
+
+          <a href="javascript:void(0)" class="project-card project-card--sm" data-category="poslovni">
+            <div class="project-card__img-wrap">
+              <img class="project-card__img"
+                src="https://www.nmartinproject.com/wp-content/uploads/2021/02/15-145x145.jpg"
+                data-src="https://www.nmartinproject.com/wp-content/uploads/2021/02/15.jpg"
+                alt="Kulturni Centar Topola"
+                onerror="this.src='https://images.unsplash.com/photo-1486325212027-8081e485255e?w=600&q=80'" />
+            </div>
+            <div class="project-card__info">
+              <span class="project-card__cat">Javna Arhitektura · Topola</span>
+              <h3 class="project-card__title">Kulturni Centar Topola</h3>
+              <p class="project-card__subtext">Višenamenska dvorana sa gledalištem, galerijskim holom i tehničkim traktom za kulturne manifestacije.</p>
+              <span class="project-card__cta">Pogledaj <span>→</span></span>
+            </div>
+          </a>
+
+          <a href="javascript:void(0)" class="project-card project-card--sm" data-category="poslovni">
+            <div class="project-card__img-wrap">
+              <img class="project-card__img"
+                src="https://www.nmartinproject.com/wp-content/uploads/2024/06/1-1-145x145.jpg"
+                data-src="https://www.nmartinproject.com/wp-content/uploads/2024/06/1-1-scaled.jpg"
+                alt="Sportska hala Aranđelovac"
+                onerror="this.src='https://images.unsplash.com/photo-1577495917889-a6f73e0e8d5d?w=600&q=80'" />
+            </div>
+            <div class="project-card__info">
+              <span class="project-card__cat">Sportski Objekat · Aranđelovac</span>
+              <h3 class="project-card__title">Sportska Hala OŠ Miloš Obrenović</h3>
+              <p class="project-card__subtext">Takmičarska dvorana sa fiksnim i teleskopskim tribinama, pratećim svlačionicama i krovnim svetlarnicima.</p>
+              <span class="project-card__cta">Pogledaj <span>→</span></span>
+            </div>
+          </a>
+
+          <a href="javascript:void(0)" class="project-card project-card--sm" data-category="enterijer">
+            <div class="project-card__img-wrap">
+              <img class="project-card__img"
+                src="https://www.nmartinproject.com/wp-content/uploads/2021/05/rtv-opremanje-kancelarijski-namestaj-35-145x145.jpg"
+                data-src="https://www.nmartinproject.com/wp-content/uploads/2021/05/rtv-opremanje-kancelarijski-namestaj-35.jpg"
+                alt="RTV Vojvodine Novi Sad"
+                onerror="this.src='https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&q=80'" />
+            </div>
+            <div class="project-card__info">
+              <span class="project-card__cat">Kancelarijski Kompleks · Novi Sad</span>
+              <h3 class="project-card__title">Nova Zgrada RTV Vojvodine</h3>
+              <p class="project-card__subtext">Projektovanje enterijera redakcija, deskova i administrativnih prostora po standardima savremenih medijskih kuća.</p>
+              <span class="project-card__cta">Pogledaj <span>→</span></span>
+            </div>
+          </a>
+
+          <a href="javascript:void(0)" class="project-card project-card--sm" data-category="poslovni">
+            <div class="project-card__img-wrap">
+              <img class="project-card__img"
+                src="https://www.nmartinproject.com/wp-content/uploads/2021/02/01-145x145.jpg"
+                data-src="https://www.nmartinproject.com/wp-content/uploads/2021/02/01.jpg"
+                alt="Javni Beležnik Vesna Milkov"
+                onerror="this.src='https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&q=80'" />
+            </div>
+            <div class="project-card__info">
+              <span class="project-card__cat">Poslovni Enterijer · Novi Sad</span>
+              <h3 class="project-card__title">Javni Beležnik Vesna Milkov</h3>
+              <p class="project-card__subtext">Organizacija kancelarijskog prostora sa strogim odvajanjem prijema stranaka od zaštićene arhive.</p>
+              <span class="project-card__cta">Pogledaj <span>→</span></span>
+            </div>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════
+         STUDIO / KAKO RADIMO
+    ══════════════════════════════════════ -->
+    <section class="studio" id="studio">
+      <div class="studio__micro-bar">
+        <span>021 · NOVI SAD</span>
+        <span>METODOLOGIJA &amp; INŽENJERING</span>
+        <span>01 / 03</span>
+      </div>
+      <div class="studio__split">
+        <!-- Left: dark text panel -->
+        <div class="studio__text-panel">
+          <p class="studio__eyebrow">Pristup Projektovanju</p>
+          <h2 class="studio__heading">
+            Rešenja na papiru<br>moraju da <em>funkcionišu</em><br>na gradilištu.
+          </h2>
+          <p class="studio__text">
+            Dobar projekat počinje od realnih parametara: orijentacije prema suncu, topografije terena, budžeta i načina na koji će klijent koristiti prostor. Ne namećemo prolazne trendove — tražimo logičan raspored, prirodno osvetljenje i materijale poput opeke, natur-betona, čelika i masiva drveta.
+          </p>
+          <p class="studio__text">
+            Tim N-Martin čine licencirani arhitekti, građevinski inženjeri i dizajneri enterijera. Sa <strong>150+ realizovanih objekata</strong> u zemlji i inostranstvu — od prve skice do upotrebne dozvole.
+          </p>
+          <a href="#kontakt" class="btn btn--gold" style="margin-top:2.5rem">Zakažite Sastanak <span class="btn__arrow">→</span></a>
+        </div>
+        <!-- Right: full-bleed image -->
+        <div class="studio__img-panel">
+          <div class="studio__img-wrap--main">
+            <img
+              class="studio__img"
+              src="https://www.nmartinproject.com/wp-content/uploads/2024/06/4k-1-1-145x145.jpg"
+              data-src="https://www.nmartinproject.com/wp-content/uploads/2024/06/4k-1-1-scaled.jpg"
+              alt="Rezidencija Fruška Gora — N-Martin"
+              onerror="this.src='https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=900&q=80'"
+            />
+            <div class="studio__badge">
+              <span class="studio__badge-idx">01 / 03</span>
+              <span class="studio__badge-name">Rezidencija Fruška Gora · Banoštor</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════
+         POKRETNA TRAKA USLUGA (MARQUEE)
+    ══════════════════════════════════════ -->
+    <div class="marquee-strip" aria-hidden="true">
+      <div class="marquee-track">
+        <span>Arhitektura</span><span class="sep">·</span>
+        <span>Enterijer</span><span class="sep">·</span>
+        <span>Urbanizam</span><span class="sep">·</span>
+        <span>Dizajn Nameštaja</span><span class="sep">·</span>
+        <span>Energetska Efikasnost</span><span class="sep">·</span>
+        <span>Studio Novi Sad</span><span class="sep">·</span>
+        <span>Arhitektura</span><span class="sep">·</span>
+        <span>Enterijer</span><span class="sep">·</span>
+        <span>Urbanizam</span><span class="sep">·</span>
+        <span>Dizajn Nameštaja</span><span class="sep">·</span>
+        <span>Energetska Efikasnost</span><span class="sep">·</span>
+        <span>Studio Novi Sad</span><span class="sep">·</span>
+      </div>
+    </div>
+
+    <!-- ══════════════════════════════════════
+         STATISTIKA / REZULTATI (EQUAL HEIGHTS)
+    ══════════════════════════════════════ -->
+    <section class="stats">
+      <div class="stats__row">
+          <div class="stat">
+            <div class="stat__val">
+              <span class="stat__num" data-target="20">0</span><span class="stat__plus">+</span>
+            </div>
+            <span class="stat__label">Godina Rada (2005–2025)</span>
+          </div>
+          <div class="stat">
+            <div class="stat__val">
+              <span class="stat__num" data-target="150">0</span><span class="stat__plus">+</span>
+            </div>
+            <span class="stat__label">Završenih Objekata</span>
+          </div>
+          <div class="stat">
+            <div class="stat__val">
+              <span class="stat__num" data-target="50">0</span><span class="stat__plus">k+</span>
+            </div>
+            <span class="stat__label">m² Projektovano</span>
+          </div>
+          <div class="stat">
+            <div class="stat__val">
+              <span class="stat__num" data-target="100">0</span><span class="stat__plus">%</span>
+            </div>
+            <span class="stat__label">Licencirani Inženjeri</span>
+          </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════
+         CITAT / IMAGE BREAK
+    ══════════════════════════════════════ -->
+    <div class="image-break">
+      <div class="image-break__inner">
+        <img
+          class="image-break__img"
+          src="https://www.nmartinproject.com/wp-content/uploads/2021/02/Plazonic-zgrada-1-01-145x145.jpg"
+          data-src="https://www.nmartinproject.com/wp-content/uploads/2021/02/Plazonic-zgrada-1-01.jpg"
+          alt="Poslovni Objekat Novi Sad — N-Martin"
+          onerror="this.src='https://images.unsplash.com/photo-1486325212027-8081e485255e?w=1920&q=80'"
+        />
+        <div class="image-break__overlay">
+          <blockquote class="image-break__quote">
+            „Dobar prostor ne traži objašnjenje. Njegov kvalitet se oseti čim kročite u njega.“
+          </blockquote>
+        </div>
+        <div class="image-break__word">Forma</div>
+      </div>
+    </div>
+
+    <!-- ══════════════════════════════════════
+         USLUGE
+    ══════════════════════════════════════ -->
+    <section class="services" id="usluge">
+      <div class="container">
+        <div class="services__top">
+          <h2 class="services__big reveal">Šta<br><em>radimo.</em></h2>
+          <p class="services__intro reveal delay-1">Pratimo vas od prvog skice do ključeva u ruci — arhitektonsko projektovanje, enterijer, urbanizam i nameštaj po meri. Svaki projekat vode licencirani stručnjaci N-Martin tima.</p>
+        </div>
+        <div class="services__grid">
+
+          <div class="service-card">
+            <div class="service-card__num">01</div>
+            <div class="service-card__icon">
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4 28V12L16 4L28 12V28H20V20H12V28H4Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <h3 class="service-card__title">Arhitektonsko Projektovanje</h3>
+            <p class="service-card__desc">Idejna rešenja (IDR), projekti za građevinsku dozvolu (PGD) i projekti za izvođenje (PZI) za porodične kuće, stambene zgrade i privredne objekte.</p>
+            <a href="#kontakt" class="service-card__link">Pošaljite Upit <span>→</span></a>
+          </div>
+
+          <div class="service-card">
+            <div class="service-card__num">02</div>
+            <div class="service-card__icon">
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="4" y="4" width="10" height="10" stroke="currentColor" stroke-width="1.5"/>
+                <rect x="18" y="4" width="10" height="10" stroke="currentColor" stroke-width="1.5"/>
+                <rect x="4" y="18" width="10" height="10" stroke="currentColor" stroke-width="1.5"/>
+                <rect x="18" y="18" width="10" height="10" stroke="currentColor" stroke-width="1.5"/>
+              </svg>
+            </div>
+            <h3 class="service-card__title">Dizajn Enterijera</h3>
+            <p class="service-card__desc">Kompletna razrada enterijera: funkcionalno zoniranje, planovi rasvete i instalacija, izbor keramike, podova i boja, uz detaljne 3D vizuelizacije.</p>
+            <a href="#kontakt" class="service-card__link">Pošaljite Upit <span>→</span></a>
+          </div>
+
+          <div class="service-card">
+            <div class="service-card__num">03</div>
+            <div class="service-card__icon">
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4 26H28M8 26V14M16 26V8M24 26V14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3 class="service-card__title">Urbanizam i Dozvole</h3>
+            <p class="service-card__desc">Urbanistički projekti, preparcelacija, provera planske dokumentacije, pribavljanje lokacijskih uslova i vođenje administrativnih procedura do upotrebne dozvole.</p>
+            <a href="#kontakt" class="service-card__link">Pošaljite Upit <span>→</span></a>
+          </div>
+
+          <div class="service-card">
+            <div class="service-card__num">04</div>
+            <div class="service-card__icon">
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="16" cy="16" r="12" stroke="currentColor" stroke-width="1.5"/>
+                <path d="M16 8V16L22 20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3 class="service-card__title">Nameštaj po Meri</h3>
+            <p class="service-card__desc">Detaljni radionički crteži za stolarsku i bravarsku izradu. Projektovanje kuhinja, ugradnih plakara i unikatnih elemenata skrojenih u milimetar.</p>
+            <a href="#kontakt" class="service-card__link">Pošaljite Upit <span>→</span></a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════
+         JOŠ PROJEKATA — HORIZONTALNA GALERIJA
+    ══════════════════════════════════════ -->
+    <section class="more-projects">
+      <div class="container">
+        <div class="section-header">
+          <span class="label-tag">Arhiva Izvedenih Objekata</span>
+        </div>
+      </div>
+      <div class="horiz-scroll" id="horizScroll" tabindex="0" aria-label="Horizontalna galerija projekata">
+        <div class="horiz-scroll__track">
+
+          <a href="javascript:void(0)" class="horiz-card">
+            <div class="horiz-card__img-wrap">
+              <img class="horiz-card__img"
+                src="https://www.nmartinproject.com/wp-content/uploads/2021/02/01-1-145x145.jpg"
+                data-src="https://www.nmartinproject.com/wp-content/uploads/2021/02/01-1.jpg"
+                alt="Muzej Konaka Zlatibor"
+                onerror="this.src='https://images.unsplash.com/photo-1577495917889-a6f73e0e8d5d?w=500&q=80'" />
+            </div>
+            <div class="horiz-card__info">
+              <span class="horiz-card__cat">Kulturno Nasleđe · Zlatibor</span>
+              <h4 class="horiz-card__title">Muzej Konaka</h4>
+            </div>
+          </a>
+
+          <a href="javascript:void(0)" class="horiz-card">
+            <div class="horiz-card__img-wrap">
+              <img class="horiz-card__img"
+                src="https://www.nmartinproject.com/wp-content/uploads/2021/06/35-145x145.jpg"
+                data-src="https://www.nmartinproject.com/wp-content/uploads/2021/06/35.jpg"
+                alt="Vrtić Čarolija Zemun"
+                onerror="this.src='https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=500&q=80'" />
+            </div>
+            <div class="horiz-card__info">
+              <span class="horiz-card__cat">Objekat za Decu · Zemun</span>
+              <h4 class="horiz-card__title">Vrtić Čarolija</h4>
+            </div>
+          </a>
+
+          <a href="javascript:void(0)" class="horiz-card">
+            <div class="horiz-card__img-wrap">
+              <img class="horiz-card__img"
+                src="https://www.nmartinproject.com/wp-content/uploads/2021/08/PXL_20210222_084610657-145x145.jpg"
+                data-src="https://www.nmartinproject.com/wp-content/uploads/2021/08/PXL_20210222_084610657.jpg"
+                alt="Knjižara Geca Kon Beograd"
+                onerror="this.src='https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?w=500&q=80'" />
+            </div>
+            <div class="horiz-card__info">
+              <span class="horiz-card__cat">Komercijalni Prostor · Beograd</span>
+              <h4 class="horiz-card__title">Knjižara Geca Kon</h4>
+            </div>
+          </a>
+
+          <a href="javascript:void(0)" class="horiz-card">
+            <div class="horiz-card__img-wrap">
+              <img class="horiz-card__img"
+                src="https://www.nmartinproject.com/wp-content/uploads/2021/02/R1-145x145.jpg"
+                data-src="https://www.nmartinproject.com/wp-content/uploads/2021/02/R1.jpg"
+                alt="Porodična kuća Novi Sad"
+                onerror="this.src='https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?w=500&q=80'" />
+            </div>
+            <div class="horiz-card__info">
+              <span class="horiz-card__cat">Porodična Vila · Novi Sad</span>
+              <h4 class="horiz-card__title">Porodična Kuća Novi Sad</h4>
+            </div>
+          </a>
+
+          <a href="javascript:void(0)" class="horiz-card">
+            <div class="horiz-card__img-wrap">
+              <img class="horiz-card__img"
+                src="https://www.nmartinproject.com/wp-content/uploads/2021/02/Citaonica-145x145.jpg"
+                data-src="https://www.nmartinproject.com/wp-content/uploads/2021/02/Citaonica.jpg"
+                alt="Čitaonica Svetozar Miletić"
+                onerror="this.src='https://images.unsplash.com/photo-1513519245088-0e12902e5a38?w=500&q=80'" />
+            </div>
+            <div class="horiz-card__info">
+              <span class="horiz-card__cat">Kulturna Ustanova · Novi Sad</span>
+              <h4 class="horiz-card__title">Čitaonica Svetozar Miletić</h4>
+            </div>
+          </a>
+
+          <a href="javascript:void(0)" class="horiz-card">
+            <div class="horiz-card__img-wrap">
+              <img class="horiz-card__img"
+                src="https://www.nmartinproject.com/wp-content/uploads/2024/06/Image24-145x145.png"
+                data-src="https://www.nmartinproject.com/wp-content/uploads/2024/06/Image24.png"
+                alt="Porodična kuća Požega"
+                onerror="this.src='https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=500&q=80'" />
+            </div>
+            <div class="horiz-card__info">
+              <span class="horiz-card__cat">Stambeni Objekat · Požega</span>
+              <h4 class="horiz-card__title">Porodična Kuća Požega</h4>
+            </div>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════
+         KONTAKT SEKCIJA
+    ══════════════════════════════════════ -->
+    <section class="contact" id="kontakt">
+      <div class="container">
+        <div class="contact__grid">
+          <div class="contact__left">
+            <span class="label-tag">Kontakt</span>
+            <h2 class="contact__heading">Planirate novi objekat<br>ili <em>preuređenje prostora?</em></h2>
+            <p class="contact__sub">Pošaljite nam lokaciju parcele, planiranu kvadraturu ili osnovne zahteve. Zakažite inicijalni razgovor sa našim inženjerskim timom u studiju ili putem video poziva.</p>
+
+            <div class="contact__details">
+              <div class="contact__detail">
+                <span class="contact__detail-label">Studio & Biro (Novi Sad)</span>
+                <span class="contact__detail-value">Miroslava Antića 7 / Danila Kiša 17, Novi Sad</span>
+              </div>
+              <div class="contact__detail">
+                <span class="contact__detail-label">Telefon Srbija</span>
+                <a href="tel:+38121424817" class="contact__detail-value">+381 21 424 817</a>
+              </div>
+              <div class="contact__detail">
+                <span class="contact__detail-label">Kancelarija Njujork</span>
+                <a href="tel:+19292492333" class="contact__detail-value">+1 929 249 2333</a>
+              </div>
+              <div class="contact__detail">
+                <span class="contact__detail-label">Email Adresa</span>
+                <a href="mailto:nikola@nmartinproject.com" class="contact__detail-value">nikola@nmartinproject.com</a>
+              </div>
+              <div class="contact__detail">
+                <span class="contact__detail-label">Pratite Studio</span>
+                <div class="contact__social">
+                  <a href="http://www.facebook.com/pages/N-martin-architectural-studio/144999842182833" target="_blank" rel="noopener noreferrer">Facebook</a>
+                  <a href="http://www.linkedin.com/pub/nikola-martinovic/6/58b/953" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                  <a href="http://www.architizer.com/en_us/firms/view/n-martin/9493/" target="_blank" rel="noopener noreferrer">Architizer</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact__right">
+            <form class="contact__form" id="contactForm">
+              <div class="form-row">
+                <label class="form-label" for="fname">Vaše Ime i Prezime</label>
+                <input type="text" id="fname" name="name" class="form-input" placeholder="npr. Marko Petrović" required />
+              </div>
+              <div class="form-row">
+                <label class="form-label" for="femail">Email Adresa</label>
+                <input type="email" id="femail" name="email" class="form-input" placeholder="vas@email.com" required />
+              </div>
+              <div class="form-row">
+                <label class="form-label" for="fphone">Broj Telefona (opciono)</label>
+                <input type="tel" id="fphone" name="phone" class="form-input" placeholder="+381 6x xxx xxxx" />
+              </div>
+              <div class="form-row">
+                <label class="form-label" for="fproject">Vrsta Projekta</label>
+                <select id="fproject" name="project" class="form-input form-select" required>
+                  <option value="">Izaberite vrstu objekta / usluge...</option>
+                  <option>Porodična kuća ili vila</option>
+                  <option>Stambeno-poslovni objekat</option>
+                  <option>Dizajn i opremanje enterijera</option>
+                  <option>Javni, školski ili sportski objekat</option>
+                  <option>Autorski nameštaj po meri</option>
+                  <option>Urbanizam i lokacijski uslovi</option>
+                  <option>Drugo</option>
+                </select>
+              </div>
+              <div class="form-row">
+                <label class="form-label" for="fmessage">Opis Projekta i Zahtevi</label>
+                <textarea id="fmessage" name="message" class="form-input form-textarea" rows="4" placeholder="Navedite lokaciju parcele, okvirnu kvadraturu i planirani početak radova..."></textarea>
+              </div>
+              <button type="submit" class="btn btn--gold btn--full">Pošaljite Upit <span class="btn__arrow">→</span></button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ══════════════════════════════════════
+       FUTER
+  ══════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <div class="footer__logo">N—MARTIN</div>
+          <p class="footer__tagline">Arhitektonski Biro<br />Novi Sad & New York</p>
+        </div>
+        <div class="footer__nav">
+          <ul>
+            <li><a href="#projekti">Projekti</a></li>
+            <li><a href="#studio">Studio</a></li>
+            <li><a href="#usluge">Usluge</a></li>
+            <li><a href="#kontakt">Kontakt</a></li>
+          </ul>
+        </div>
+        <div class="footer__contact">
+          <p><a href="mailto:nikola@nmartinproject.com">nikola@nmartinproject.com</a></p>
+          <p>Miroslava Antića 7, Novi Sad</p>
+          <p>Tel: +381 21 424 817</p>
+        </div>
+        <div class="footer__social">
+          <a href="http://www.facebook.com/pages/N-martin-architectural-studio/144999842182833" target="_blank" rel="noopener noreferrer">Facebook</a>
+          <a href="http://www.linkedin.com/pub/nikola-martinovic/6/58b/953" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a href="http://www.architizer.com/en_us/firms/view/n-martin/9493/" target="_blank" rel="noopener noreferrer">Architizer</a>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>© 2026 N-Martin Arhitektonski Studio. Sva prava zadržana.</p>
+        <p>Arhitektura · Inženjering · Izvođenje</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js?v=15" defer></script>
+</body>
+</html>
