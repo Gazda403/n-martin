@@ -1,0 +1,15 @@
+# Python scripts & dumps
+*.py
+*.html_dump
+fb_dump.html
+fb_photos_dump.html
+ig_dump.html
+preview_images.html
+captions.txt
+extracted_fb_images.json
+
+# System & IDE files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

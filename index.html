@@ -1,12 +1,12 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="sr-Latn">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>N-Martin | Arhitektonski Studio — Nikola Martinović</title>
-  <meta name="description" content="Arhitektonski biro N-Martin iz Novog Sada, osnovan 2005. godine pod vođstvom Nikole Martinovića. Projektovanje stambenih i poslovnih objekata, enterijer i urbanizam." />
-  <meta property="og:title" content="N-Martin Arhitektonski Studio — Nikola Martinović" />
-  <meta property="og:description" content="Projektovanje stambenih, poslovnih i javnih objekata u Srbiji, regionu i SAD. Preko 150 realizovanih projekata od 2005. godine." />
+  <title>MAESTRO Namjestaj â€” Namjestaj po Mjeri, Banja Luka</title>
+  <meta name="description" content="MAESTRO Namjestaj â€” Sladana Mandic s.p. Banja Luka. Proizvodnja namjestaja po mjeri: kuhinje, plakari, dnevne i spavace sobe, kupatilski namjestaj od iverice, medijapana i furnira." />
+  <meta property="og:title" content="MAESTRO Namjestaj â€” Namjestaj po Mjeri, Banja Luka" />
+  <meta property="og:description" content="Namjestaj po vasoj mjeri. Kuhinje, spavace sobe, plakari, dnevne sobe i kupatilski namjestaj. Od 2009. godine, Banja Luka." />
   <meta property="og:type" content="website" />
 
   <!-- Fonts -->
@@ -14,198 +14,397 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;0,900;1,400;1,600;1,700;1,800&family=Syne:wght@400;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 
-  <!-- Favicon -->
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%231A1916'/><text x='50%' y='55%' dominant-baseline='middle' text-anchor='middle' fill='%23B8945A' font-family='serif' font-size='18' font-weight='bold'>N</text></svg>" />
+  <!-- Favicon: M for Maestro -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%231A1714'/><text x='50%25' y='55%25' dominant-baseline='middle' text-anchor='middle' fill='%23C9A96E' font-family='serif' font-size='14' font-weight='bold'>M</text></svg>" />
 
-  <link rel="stylesheet" href="style.css?v=14" />
+  <link rel="stylesheet" href="style.css?v=21" />
+
+  <style>
+    /* â”€â”€ MAESTRO BRAND OVERRIDES â”€â”€ */
+    :root {
+      --clr-cream: #F7F3EC;
+      --clr-cream-dark: #EEE9DF;
+      --clr-parchment: #FAF7F2;
+      --clr-charcoal: #1A1714;
+      --clr-charcoal-70: rgba(26, 23, 20, 0.70);
+      --clr-charcoal-30: rgba(26, 23, 20, 0.30);
+      --clr-charcoal-10: rgba(26, 23, 20, 0.10);
+      --clr-gold: #C9A96E;
+      --clr-gold-light: #DFC08E;
+      --clr-warm-gray: #8C8880;
+    }
+    .loader__logo { font-size: clamp(1.8rem, 5vw, 3.2rem); letter-spacing: 0.45em; }
+    .loader__n { opacity: 0; transform: translateY(40px); }
+    .loader__dash { color: var(--clr-gold); opacity: 0; transform: translateY(40px); }
+    .loader__martin { opacity: 0; transform: translateY(40px); }
+    .hero__disciplines-list {
+      background: linear-gradient(90deg, var(--clr-charcoal-70) 40%, var(--clr-gold-light) 50%, var(--clr-charcoal-70) 60%);
+      background-size: 200% auto;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .hero-card__img { object-position: center center; }
+    .footer__logo { letter-spacing: 0.35em; font-size: 1.6rem; }
+    .image-break__word { font-size: clamp(4rem, 12vw, 11rem); }
+
+    /* ── RECENZIJE / TESTIMONIALS CAROUSEL ── */
+    .testimonials-section {
+      padding: clamp(4rem, 8vw, 8rem) 0;
+      background: var(--clr-cream);
+      overflow: hidden;
+      position: relative;
+    }
+    .testimonials-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-bottom: clamp(2.5rem, 5vw, 4.5rem);
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+    .testimonials-heading {
+      font-family: var(--ff-display);
+      font-size: clamp(2.2rem, 5vw, 3.8rem);
+      font-weight: 300;
+      line-height: 1.15;
+      color: var(--clr-charcoal);
+      margin-top: 0.75rem;
+    }
+    .testimonials-heading em {
+      font-style: italic;
+      font-family: var(--ff-serif);
+      color: var(--clr-gold);
+    }
+    .google-badge {
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+      background: var(--clr-parchment);
+      border: 1px solid var(--clr-charcoal-10);
+      padding: 1rem 1.5rem;
+      border-radius: 9999px;
+      box-shadow: 0 4px 20px rgba(26,25,22,0.04);
+    }
+    .google-badge__stars {
+      display: flex;
+      gap: 3px;
+    }
+    .google-badge__meta {
+      display: flex;
+      flex-direction: column;
+    }
+    .google-badge__score {
+      font-family: var(--ff-sans-display);
+      font-size: var(--fs-md);
+      font-weight: 700;
+      color: var(--clr-charcoal);
+      line-height: 1.2;
+    }
+    .google-badge__source {
+      font-size: var(--fs-xs);
+      color: var(--clr-warm-gray);
+      letter-spacing: 0.05em;
+    }
+    .testimonials-carousel {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+      padding: 1.5rem 0;
+    }
+    .testimonials-carousel::before,
+    .testimonials-carousel::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: clamp(40px, 8vw, 140px);
+      z-index: 2;
+      pointer-events: none;
+    }
+    .testimonials-carousel::before {
+      left: 0;
+      background: linear-gradient(to right, var(--clr-cream), transparent);
+    }
+    .testimonials-carousel::after {
+      right: 0;
+      background: linear-gradient(to left, var(--clr-cream), transparent);
+    }
+    .testimonials-track {
+      display: flex !important;
+      flex-direction: row !important;
+      flex-wrap: nowrap !important;
+      gap: 2rem;
+      width: max-content;
+      animation: testimonialsMarquee 35s linear infinite;
+      will-change: transform;
+    }
+    .testimonials-track:hover {
+      animation-play-state: paused;
+    }
+    @keyframes testimonialsMarquee {
+      0% {
+        transform: translate3d(0, 0, 0);
+      }
+      100% {
+        transform: translate3d(-50%, 0, 0);
+      }
+    }
+    .testi-card {
+      width: clamp(320px, 28vw, 420px) !important;
+      flex-shrink: 0 !important;
+      background: var(--clr-parchment);
+      border: 1px solid var(--clr-charcoal-10);
+      padding: clamp(1.75rem, 3vw, 2.5rem);
+      border-radius: 24px;
+      box-shadow: 0 4px 20px rgba(26,25,22,0.03);
+      display: flex !important;
+      flex-direction: column !important;
+      justify-content: space-between !important;
+      transition: transform var(--tr-normal), box-shadow var(--tr-normal), border-color var(--tr-normal);
+      cursor: grab;
+      box-sizing: border-box;
+    }
+    .testi-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 16px 36px rgba(26,25,22,0.08);
+      border-color: var(--clr-gold-light);
+    }
+    .testi-card__stars {
+      display: flex;
+      gap: 4px;
+      color: #F59E0B;
+      font-size: 1.15rem;
+      margin-bottom: 1.25rem;
+    }
+    .testi-card__quote {
+      font-family: var(--ff-serif);
+      font-size: clamp(1.05rem, 1.35vw, 1.25rem);
+      line-height: 1.6;
+      color: var(--clr-charcoal);
+      font-style: italic;
+      margin-bottom: 2rem;
+      flex-grow: 1;
+    }
+    .testi-card__author {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      border-top: 1px solid var(--clr-charcoal-10);
+      padding-top: 1.25rem;
+    }
+    .testi-card__avatar {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: var(--clr-charcoal);
+      color: var(--clr-gold);
+      font-family: var(--ff-sans-display);
+      font-size: var(--fs-xs);
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      letter-spacing: 0.05em;
+      border: 1px solid rgba(184,148,90,0.3);
+      flex-shrink: 0;
+    }
+    .testi-card__name {
+      font-family: var(--ff-sans-display);
+      font-size: var(--fs-sm);
+      font-weight: 700;
+      color: var(--clr-charcoal);
+      letter-spacing: 0.04em;
+      margin-bottom: 0.2rem;
+    }
+    .testi-card__role {
+      font-size: var(--fs-xs);
+      color: var(--clr-warm-gray);
+      letter-spacing: 0.02em;
+    }
+    @media (max-width: 768px) {
+      .testimonials-header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .testi-card {
+        width: 290px !important;
+      }
+    }
+  </style>
 </head>
 <body>
 
-  <!-- ── CUSTOM CURSOR ── -->
+  <!-- CUSTOM CURSOR -->
   <div class="cursor" id="cursor">
     <div class="cursor__ring"></div>
     <div class="cursor__dot"></div>
   </div>
 
-  <!-- ── LOADER ── -->
+  <!-- LOADER -->
   <div class="loader" id="loader">
     <div class="loader__inner" id="loaderInner">
       <div class="loader__square-wrap">
         <div class="loader__square" id="loaderSquare"></div>
       </div>
       <div class="loader__logo">
-        <span class="loader__n">N</span><span class="loader__dash">—</span><span class="loader__martin">MARTIN</span>
+        <span class="loader__n">MAESTRO</span><br>
+        <span class="loader__dash" style="font-size:0.42em;letter-spacing:0.35em;font-family:var(--ff-body);font-weight:300">NAMJESTAJ</span>
       </div>
       <div class="loader__bar"><div class="loader__fill"></div></div>
     </div>
   </div>
 
-  <!-- ══════════════════════════════════════
-       NAVIGACIJA
-  ══════════════════════════════════════ -->
+  <!-- NAVIGACIJA -->
   <nav class="nav" id="nav">
-    <a href="#" class="nav__logo" aria-label="N-Martin Početna">
-      <span class="nav__logo-n">N</span><span class="nav__logo-dash">—</span><span class="nav__logo-martin">MARTIN</span>
+    <a href="#" class="nav__logo" aria-label="MAESTRO Namjestaj Pocetna">
+      <span class="nav__logo-n">MAESTRO</span><span class="nav__logo-dash" style="color:var(--clr-gold);margin:0 0.1em">&middot;</span><span class="nav__logo-martin">NAMJESTAJ</span>
     </a>
     <div class="nav__meta">
-      <span class="nav__location">Arhitektonski Biro · Novi Sad · Osnovan 2005.</span>
+      <span class="nav__location">Namjestaj po Mjeri &middot; Banja Luka &middot; Od 2009.</span>
     </div>
     <ul class="nav__links">
-      <li><a href="#projekti" class="nav__link">Projekti</a></li>
-      <li><a href="#studio" class="nav__link">Studio</a></li>
+      <li><a href="#radovi" class="nav__link">Radovi</a></li>
+      <li><a href="#o-nama" class="nav__link">O Nama</a></li>
       <li><a href="#usluge" class="nav__link">Usluge</a></li>
       <li><a href="#kontakt" class="nav__link">Kontakt</a></li>
     </ul>
-    <button class="nav__hamburger" id="hamburger" aria-label="Otvori navigacioni meni">
+    <button class="nav__hamburger" id="hamburger" aria-label="Otvori meni">
       <span></span><span></span>
     </button>
   </nav>
 
-  <!-- Mobilni Meni -->
+  <!-- MOBILNI MENI -->
   <div class="mobile-menu" id="mobileMenu">
     <ul class="mobile-menu__links">
-      <li><a href="#projekti" class="mobile-menu__link">Projekti</a></li>
-      <li><a href="#studio" class="mobile-menu__link">Studio</a></li>
+      <li><a href="#radovi" class="mobile-menu__link">Radovi</a></li>
+      <li><a href="#o-nama" class="mobile-menu__link">O Nama</a></li>
       <li><a href="#usluge" class="mobile-menu__link">Usluge</a></li>
       <li><a href="#kontakt" class="mobile-menu__link">Kontakt</a></li>
     </ul>
     <div class="mobile-menu__footer">
-      <a href="http://www.facebook.com/pages/N-martin-architectural-studio/144999842182833" target="_blank" rel="noopener noreferrer">Facebook</a>
-      <a href="http://www.linkedin.com/pub/nikola-martinovic/6/58b/953" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-      <a href="http://www.architizer.com/en_us/firms/view/n-martin/9493/" target="_blank" rel="noopener noreferrer">Architizer</a>
+      <a href="https://www.facebook.com/namjestaj.maestro/" target="_blank" rel="noopener noreferrer">Facebook</a>
+      <a href="https://www.instagram.com/miroslavmaestro_namjestaj/" target="_blank" rel="noopener noreferrer">Instagram</a>
+      <a href="tel:+38765544921">+387 65 544-921</a>
     </div>
   </div>
 
   <main>
 
-    <!-- ══════════════════════════════════════
-         HERO SEKCIJA — ARCHETA EDITORIAL TRIPTYCH
-    ══════════════════════════════════════ -->
+    <!-- HERO -->
     <section class="hero hero--editorial" id="hero">
       <div class="hero__editorial-container">
         
-        <!-- Headline Lockup (Archeta style: balanced sans + italic serif) -->
         <div class="hero__heading-wrap">
           <h1 class="hero__title">
-            <span class="hero__title-sans">BEZVREMENSKA</span>
-            <em class="hero__title-serif">Arhitektura</em>
+            <span class="hero__title-sans">NAMJESTAJ</span>
+            <em class="hero__title-serif">po vasoj mjeri.</em>
           </h1>
           
           <div class="hero__sub-bar">
             <div class="hero__disciplines">
-              <span class="hero__disciplines-label">Discipline</span>
-              <span class="hero__disciplines-list">Arhitektura · Rezidencije · Poslovni Objekti · Enterijer · Inženjering</span>
+              <span class="hero__disciplines-label">Asortiman</span>
+              <span class="hero__disciplines-list">Kuhinje &middot; Plakari &middot; Spavace Sobe &middot; Dnevni Boravak &middot; Kupatilski Namjestaj</span>
             </div>
             <div class="hero__coords">
-              <span>Novi Sad, Srbija · 45°15'N 19°51'E</span>
+              <span>Banja Luka, BiH &middot; Od 2009. godine</span>
             </div>
           </div>
         </div>
 
-        <!-- 3-Card Interactive Triptych (Archeta multi-image layout with full photo visibility) -->
-        <div class="hero__triptych" id="heroTriptych" role="region" aria-label="Istaknuti projekti N-Martin studija">
+        <div class="hero__triptych" id="heroTriptych" role="region" aria-label="Istaknuti radovi MAESTRO namjestaja">
           
-          <!-- Card 1: KSS Office Building -->
+          <!-- Card 1: Kuhinja -->
           <article class="hero-card hero-card--active" data-index="0" tabindex="0">
             <div class="hero-card__media">
               <img
-                src="hero%20images/KSS-exterijer-1-01.jpg"
-                alt="Poslovni Centar KSS Novi Sad — N-Martin"
+                src="images/maestro/kuhinja.webp"
+                alt="Moderna kuhinja po mjeri â€” MAESTRO Namjestaj Banja Luka"
                 class="hero-card__img"
                 loading="eager"
               />
               <div class="hero-card__overlay"></div>
             </div>
-            
             <div class="hero-card__badge">
-              <span class="hero-card__tag">01 · Poslovna Arhitektura</span>
+              <span class="hero-card__tag">01 &middot; Kuhinja</span>
             </div>
-
             <div class="hero-card__caption">
               <div class="hero-card__meta">
-                <span class="hero-card__year">2023 · Realizovano</span>
-                <span class="hero-card__loc">Novi Sad</span>
+                <span class="hero-card__year">Medijapan &amp; Lakirana Fronta</span>
+                <span class="hero-card__loc">Banja Luka</span>
               </div>
-              <h2 class="hero-card__name">Poslovni Centar KSS</h2>
+              <h2 class="hero-card__name">Kreativna i moderna kuhinja</h2>
               <div class="hero-card__action">
-                <a href="#projekti" class="hero-card__link">
-                  <span>Istraži projekat</span>
+                <a href="#radovi" class="hero-card__link">
+                  <span>Pogledaj radove</span>
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                 </a>
               </div>
             </div>
-            
-            <!-- Hairline Progress Indicator -->
             <div class="hero-card__progress">
               <div class="hero-card__progress-fill"></div>
             </div>
           </article>
 
-          <!-- Card 2: Fruška Gora Villa -->
+          <!-- Card 2: Dnevna Soba -->
           <article class="hero-card" data-index="1" tabindex="0">
             <div class="hero-card__media">
               <img
-                src="hero%20images/4-785x442.jpg"
-                alt="Rezidencijalna Vila sa Bazenom Fruška Gora — N-Martin"
+                src="images/maestro/komodadnevnasoba.webp"
+                alt="Dnevni boravak sa TV elementom i LED letvicama â€” MAESTRO Namjestaj"
                 class="hero-card__img"
                 loading="eager"
               />
               <div class="hero-card__overlay"></div>
             </div>
-            
             <div class="hero-card__badge">
-              <span class="hero-card__tag">02 · Privatna Rezidencija</span>
+              <span class="hero-card__tag">02 &middot; Dnevni Boravak</span>
             </div>
-
             <div class="hero-card__caption">
               <div class="hero-card__meta">
-                <span class="hero-card__year">2022 · Realizovano</span>
-                <span class="hero-card__loc">Fruška Gora</span>
+                <span class="hero-card__year">TV Element &middot; Drvene Letvice &middot; LED</span>
+                <span class="hero-card__loc">Banja Luka</span>
               </div>
-              <h2 class="hero-card__name">Vila na Fruškoj Gori</h2>
+              <h2 class="hero-card__name">Dnevni boravak sa detaljima i namjestajem od lakiranog medijapana i drvene ploce, komoda od Egger iverala</h2>
               <div class="hero-card__action">
-                <a href="#projekti" class="hero-card__link">
-                  <span>Istraži projekat</span>
+                <a href="#radovi" class="hero-card__link">
+                  <span>Pogledaj radove</span>
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                 </a>
               </div>
             </div>
-
             <div class="hero-card__progress">
               <div class="hero-card__progress-fill"></div>
             </div>
           </article>
 
-          <!-- Card 3: Sportska Dvorana Aranđelovac -->
+          <!-- Card 3: Spavaca Soba -->
           <article class="hero-card" data-index="2" tabindex="0">
             <div class="hero-card__media">
               <img
-                src="hero%20images/1-1.jpg"
-                alt="Gradska Sportska Dvorana Aranđelovac — N-Martin"
+                src="images/maestro/spavaca%20soba.webp"
+                alt="Spavaca soba s ugradbenim ormarom â€” MAESTRO Namjestaj Banja Luka"
                 class="hero-card__img"
                 loading="eager"
               />
               <div class="hero-card__overlay"></div>
             </div>
-            
             <div class="hero-card__badge">
-              <span class="hero-card__tag">03 · Javni Objekat</span>
+              <span class="hero-card__tag">03 &middot; Spavaca Soba</span>
             </div>
-
             <div class="hero-card__caption">
               <div class="hero-card__meta">
-                <span class="hero-card__year">2021 · Javni Konkurs</span>
-                <span class="hero-card__loc">Aranđelovac</span>
+                <span class="hero-card__year">Ormar &middot; Krevet &middot; Nocni Ormaric</span>
+                <span class="hero-card__loc">Banja Luka</span>
               </div>
-              <h2 class="hero-card__name">Sportska Dvorana</h2>
+              <h2 class="hero-card__name">Kompletan Set Spavace Sobe</h2>
               <div class="hero-card__action">
-                <a href="#projekti" class="hero-card__link">
-                  <span>Istraži projekat</span>
+                <a href="#radovi" class="hero-card__link">
+                  <span>Pogledaj radove</span>
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                 </a>
               </div>
             </div>
-
             <div class="hero-card__progress">
               <div class="hero-card__progress-fill"></div>
             </div>
@@ -213,7 +412,6 @@
 
         </div>
 
-        <!-- Editorial side index marker -->
         <div class="hero__side-index" aria-hidden="true">
           <span class="hero__side-index-num" id="heroSideNum">01 / 03</span>
           <div class="hero__side-line"></div>
@@ -222,218 +420,185 @@
       </div>
     </section>
 
-    <!-- ══════════════════════════════════════
-         UVODNA IZJAVA / SAISEI 3-COLUMN EDITORIAL
-    ══════════════════════════════════════ -->
+    <!-- UVODNA IZJAVA -->
     <section class="intro" id="o-nama">
       <div class="container">
         <div class="saisei-intro">
-          <!-- Col 1: Vertical typography -->
           <div class="saisei-intro__left reveal">
             <div class="saisei-tag">
               <span class="saisei-tag__num">01</span>
-              <span class="saisei-tag__label">Tradicija &amp; Zanat</span>
-              <span class="saisei-tag__sub">Novi Sad, 2005.</span>
+              <span class="saisei-tag__label">Zanat &amp; Preciznost</span>
+              <span class="saisei-tag__sub">Banja Luka, 2009.</span>
             </div>
             <h2 class="saisei-intro__title">
               <span>Svaki</span>
-              <span>red</span>
-              <span>govori</span>
-              <em>svoju priču.</em>
+              <span>komad</span>
+              <span>prica</span>
+              <em>vasu pricu.</em>
             </h2>
           </div>
 
-          <!-- Col 2: Featured tall portrait photograph -->
           <div class="saisei-intro__center reveal delay-1">
             <div class="saisei-intro__img-frame">
               <img
                 class="saisei-intro__img"
-                src="https://www.nmartinproject.com/wp-content/uploads/2021/02/Citaonica-145x145.jpg"
-                data-src="https://www.nmartinproject.com/wp-content/uploads/2021/02/Citaonica.jpg"
-                alt="Arhitektonski detalj enterijera — N-Martin"
-                onerror="this.src='https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=900&q=80'"
+                src="images/maestro/vasa-prica.webp"
+                alt="Namjestaj po mjeri â€” MAESTRO Namjestaj Banja Luka"
               />
               <div class="saisei-intro__caption">
-                <span>Čitaonica Svetozar Miletić</span>
-                <span>Novi Sad</span>
+                <span>Namjestaj po mjeri</span>
+                <span>Banja Luka</span>
               </div>
             </div>
           </div>
 
-          <!-- Col 3: Editorial text, pill CTA, and detail photo -->
           <div class="saisei-intro__right reveal delay-2">
             <p class="saisei-intro__text">
-              U svakom projektu biroa N-Martin, arhitektura je promišljen dijalog između funkcije, statike i prirodnog svetla. Od 2005. godine u Novom Sadu gradimo prostore koji odolevaju prolaznim trendovima — sa jasnim linijama, prirodnim materijalima i nepokolebljivom preciznošću.
+              U MAESTRO radionici svaki komad namjestaja nastaje kao jedinstven predmet â€” ne serijski, vec upravo onako kako vi zamisljavate. Biramo boju, materijal i dizajn zajedno s vama, dok nasi majstori pretvaraju skicu u stvarnost.
             </p>
             <p class="saisei-intro__subtext">
-              Vodimo projekte kroz sve faze: od urbanističkih analiza i idejnog koncepta, preko statike i dozvola, do unikatnog enterijera i strogog autorskog nadzora na gradilištu.
+              Radimo od iverice, medijapana i furnira. Odgovaramo na vase pozive i poruke i dolazimo na vasu adresu s uzorcima i idejama â€” jer najbolji namjestaj nastaje u razgovoru.
             </p>
             <div class="saisei-intro__action">
-              <a href="#studio" class="btn btn--pill">O Studiju <span class="btn__arrow">→</span></a>
+              <a href="#usluge" class="btn btn--pill">Nase Usluge <span class="btn__arrow">&rarr;</span></a>
             </div>
             <div class="saisei-intro__secondary-img-wrap">
               <img
                 class="saisei-intro__secondary-img"
-                src="https://www.nmartinproject.com/wp-content/uploads/2021/02/DSC6944-145x145.jpg"
-                data-src="https://www.nmartinproject.com/wp-content/uploads/2021/02/DSC6944-scaled.jpg"
-                alt="Detalj izvođenja i prirodni materijali"
-                onerror="this.src='https://images.unsplash.com/photo-1513519245088-0e12902e5a38?w=600&q=80'"
+                src="images/maestro/izrada%20i%20montaza.webp"
+                alt="Izrada i montaza namjestaja â€” MAESTRO Namjestaj"
               />
-              <span class="saisei-intro__secondary-tag">Izvođenje &amp; Detalji</span>
+              <span class="saisei-intro__secondary-tag">Izrada &amp; Montaza</span>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ══════════════════════════════════════
-         PROJEKTI
-    ══════════════════════════════════════ -->
-    <section class="projects" id="projekti">
+    <!-- RADOVI / PROJEKTI -->
+    <section class="projects" id="radovi">
       <div class="container">
         <div class="projects__headline reveal">
           <div class="projects__headline-inner">
             <h2 class="archeta-title">
-              <span class="archeta-title__sans">NAŠA</span>
-              <em class="archeta-title__serif">Remek-Dela</em>
+              <span class="archeta-title__sans">NASI</span>
+              <em class="archeta-title__serif">Radovi</em>
             </h2>
             <div class="projects__headline-meta">
-              <span class="meta-label">Arhitektonski portfolio</span>
-              <a href="javascript:void(0)" class="link-arrow">Kompletan portfolio <span>→</span></a>
+              <span class="meta-label">Portfolio radova</span>
+              <a href="#kontakt" class="link-arrow">Zatrazite ponudu <span>&rarr;</span></a>
             </div>
           </div>
 
-          <!-- Archeta-style discipline filter row -->
           <div class="projects__disciplines-bar">
             <span class="disc-label">Kategorije:</span>
             <div class="disc-pills">
               <button class="disc-pill active" data-filter="all">Sve</button>
-              <button class="disc-pill" data-filter="rezidencija">Rezidencije</button>
-              <button class="disc-pill" data-filter="poslovni">Poslovni &amp; Javni</button>
-              <button class="disc-pill" data-filter="enterijer">Enterijer</button>
+              <button class="disc-pill" data-filter="kuhinja">Kuhinje</button>
+              <button class="disc-pill" data-filter="spavaca">Spavace Sobe</button>
+              <button class="disc-pill" data-filter="dnevna">Dnevni Boravak</button>
+              <button class="disc-pill" data-filter="plakar">Plakari &amp; Hodnici</button>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- Glavni istaknuti projekat -->
       <div class="projects__featured">
-        <a href="javascript:void(0)" class="project-card project-card--large" data-category="rezidencija">
+        <a href="javascript:void(0)" class="project-card project-card--large" data-category="kuhinja">
           <div class="project-card__img-wrap">
             <img
               class="project-card__img"
-              src="https://www.nmartinproject.com/wp-content/uploads/2024/06/4k-1-1-145x145.jpg"
-              data-src="https://www.nmartinproject.com/wp-content/uploads/2024/06/4k-1-1-scaled.jpg"
-              alt="Vikendica u Banoštoru — Rezidencija Fruška Gora"
-              onerror="this.src='https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=80'"
+              src="images/maestro/kuhinja2.webp"
+              alt="Kuhinja sa frontama od lakiranog medijapana â€” MAESTRO Namjestaj Banja Luka"
             />
           </div>
           <div class="project-card__info">
-            <span class="project-card__cat">Rezidencijalna Arhitektura · Fruška Gora · 2024</span>
-            <h3 class="project-card__title">Vikendica u Banoštoru</h3>
-            <p class="project-card__desc">Kuća za odmor ukopana u padinu Fruške Gore. Kombinacija natur-betona, lokalnog kamena i hrastovih panela sa otvorenim pogledom na Dunav.</p>
-            <span class="project-card__cta">Pogledaj Detalje Projekta <span>→</span></span>
+            <span class="project-card__cat">Kuhinja po Mjeri &middot; Lakirani Medijapan &middot; Compact 13 mm</span>
+            <h3 class="project-card__title">Moderna Kuhinja od Lakiranog Medijapana</h3>
+            <p class="project-card__desc">Kuhinja sa frontama od lakiranog medijapana, radna ploca od Compact 13 mm debljine, sudoper podgradni Blanco, LED rasvjeta ispod visecih elemenata i na zidnom panelu na TV komodi, kaljeno-lakobel staklo kao zidna obloga.</p>
+            <span class="project-card__cta">Pogledaj detalje <span>&rarr;</span></span>
           </div>
         </a>
       </div>
 
-      <!-- Mreža projekata -->
       <div class="container">
         <div class="projects__grid">
 
-          <a href="javascript:void(0)" class="project-card project-card--sm" data-category="rezidencija">
+          <!-- 1: Kuhinja s tamnim akcentima -->
+          <a href="javascript:void(0)" class="project-card project-card--sm" data-category="kuhinja">
             <div class="project-card__img-wrap">
-              <img class="project-card__img"
-                src="https://www.nmartinproject.com/wp-content/uploads/2021/02/DSC6944-145x145.jpg"
-                data-src="https://www.nmartinproject.com/wp-content/uploads/2021/02/DSC6944-scaled.jpg"
-                alt="Porodična Kuća Zlatibor"
-                onerror="this.src='https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80'" />
+              <img class="project-card__img" src="images/maestro/kuhinjasatamninakcentima.webp" alt="Kuhinja s tamnim akcentima" />
             </div>
             <div class="project-card__info">
-              <span class="project-card__cat">Stambeni Objekat · Zlatibor</span>
-              <h3 class="project-card__title">Porodična Kuća — Zlatibor</h3>
-              <p class="project-card__subtext">Masivna drvena konstrukcija, termoizolacija visokih performansi i krov prilagođen planinskim klimatskim uslovima.</p>
-              <span class="project-card__cta">Pogledaj <span>→</span></span>
+              <span class="project-card__cat">Kuhinja &middot; Visoko Sjajna Fronta</span>
+              <h3 class="project-card__title">Kuhinja s Tamnim Akcentima</h3>
+              <p class="project-card__subtext">Minimalisticka kuhinja s visoko sjajnim frontama i ugradbenom bijelom tehnikom. Diskretna elegancija u svakom detalju.</p>
+              <span class="project-card__cta">Pogledaj <span>&rarr;</span></span>
             </div>
           </a>
 
-          <a href="javascript:void(0)" class="project-card project-card--sm" data-category="enterijer">
+          <!-- 2: Kompletno opremanje -->
+          <a href="javascript:void(0)" class="project-card project-card--sm" data-category="dnevna">
             <div class="project-card__img-wrap">
-              <img class="project-card__img"
-                src="https://www.nmartinproject.com/wp-content/uploads/2021/02/konnect1-145x145.jpg"
-                data-src="https://www.nmartinproject.com/wp-content/uploads/2021/02/konnect1.jpg"
-                alt="Konnect Golf New York"
-                onerror="this.src='https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=600&q=80'" />
+              <img class="project-card__img" src="images/maestro/kompletno%20n.jpg" alt="Kompletno opremanje stana" />
             </div>
             <div class="project-card__info">
-              <span class="project-card__cat">Komercijalni Enterijer · Menhetn, Njujork</span>
-              <h3 class="project-card__title">Konnect Golf New York</h3>
-              <p class="project-card__subtext">Simulator centar na Petoj Aveniji. Projektovanje prostorne akustike, zonske rasvete i pratećeg bara.</p>
-              <span class="project-card__cta">Pogledaj <span>→</span></span>
+              <span class="project-card__cat">Enterijer &middot; Po Mjeri</span>
+              <h3 class="project-card__title">Kompletno Opremanje</h3>
+              <p class="project-card__subtext">Kompletno projektovanje, izrada i montaza namjestaja po mjeri za citav prostor u savrsenoj stilskoj harmoniji.</p>
+              <span class="project-card__cta">Pogledaj <span>&rarr;</span></span>
             </div>
           </a>
 
-          <a href="javascript:void(0)" class="project-card project-card--sm" data-category="poslovni">
+          <!-- 3: Kompletan set spavace sobe -->
+          <a href="javascript:void(0)" class="project-card project-card--sm" data-category="spavaca">
             <div class="project-card__img-wrap">
-              <img class="project-card__img"
-                src="https://www.nmartinproject.com/wp-content/uploads/2021/02/15-145x145.jpg"
-                data-src="https://www.nmartinproject.com/wp-content/uploads/2021/02/15.jpg"
-                alt="Kulturni Centar Topola"
-                onerror="this.src='https://images.unsplash.com/photo-1486325212027-8081e485255e?w=600&q=80'" />
+              <img class="project-card__img" src="images/maestro/spavacasoba.jpg" alt="Kompletan set spavace sobe" />
             </div>
             <div class="project-card__info">
-              <span class="project-card__cat">Javna Arhitektura · Topola</span>
-              <h3 class="project-card__title">Kulturni Centar Topola</h3>
-              <p class="project-card__subtext">Višenamenska dvorana sa gledalištem, galerijskim holom i tehničkim traktom za kulturne manifestacije.</p>
-              <span class="project-card__cta">Pogledaj <span>→</span></span>
+              <span class="project-card__cat">Spavaca Soba &middot; Komplet po Mjeri</span>
+              <h3 class="project-card__title">Kompletan Set Spavace Sobe</h3>
+              <p class="project-card__subtext">Krevet, nocni ormarici i ugaoni ormar radeni kao jedinstven skup &mdash; isti materijal, isti okov, isti stil.</p>
+              <span class="project-card__cta">Pogledaj <span>&rarr;</span></span>
             </div>
           </a>
 
-          <a href="javascript:void(0)" class="project-card project-card--sm" data-category="poslovni">
+          <!-- 4: Kompletan stan -->
+          <a href="javascript:void(0)" class="project-card project-card--sm" data-category="dnevna">
             <div class="project-card__img-wrap">
-              <img class="project-card__img"
-                src="https://www.nmartinproject.com/wp-content/uploads/2024/06/1-1-145x145.jpg"
-                data-src="https://www.nmartinproject.com/wp-content/uploads/2024/06/1-1-scaled.jpg"
-                alt="Sportska hala Aranđelovac"
-                onerror="this.src='https://images.unsplash.com/photo-1577495917889-a6f73e0e8d5d?w=600&q=80'" />
+              <img class="project-card__img" src="images/maestro/nicestancic.webp" alt="Kompletno uredenje stana po mjeri" />
             </div>
             <div class="project-card__info">
-              <span class="project-card__cat">Sportski Objekat · Aranđelovac</span>
-              <h3 class="project-card__title">Sportska Hala OŠ Miloš Obrenović</h3>
-              <p class="project-card__subtext">Takmičarska dvorana sa fiksnim i teleskopskim tribinama, pratećim svlačionicama i krovnim svetlarnicima.</p>
-              <span class="project-card__cta">Pogledaj <span>→</span></span>
+              <span class="project-card__cat">Stan &middot; Kompletno Uredenje</span>
+              <h3 class="project-card__title">Kompletan Stan po Mjeri</h3>
+              <p class="project-card__subtext">Individualno rjesenje za moderan stambeni prostor sa pazljivo uskladenim elementima, bojama i rasvjetom.</p>
+              <span class="project-card__cta">Pogledaj <span>&rarr;</span></span>
             </div>
           </a>
 
-          <a href="javascript:void(0)" class="project-card project-card--sm" data-category="enterijer">
+          <!-- 5: Retro kupatilo -->
+          <a href="javascript:void(0)" class="project-card project-card--sm" data-category="plakar">
             <div class="project-card__img-wrap">
-              <img class="project-card__img"
-                src="https://www.nmartinproject.com/wp-content/uploads/2021/05/rtv-opremanje-kancelarijski-namestaj-35-145x145.jpg"
-                data-src="https://www.nmartinproject.com/wp-content/uploads/2021/05/rtv-opremanje-kancelarijski-namestaj-35.jpg"
-                alt="RTV Vojvodine Novi Sad"
-                onerror="this.src='https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&q=80'" />
+              <img class="project-card__img" src="images/maestro/retrowc.webp" alt="Retro kupatilski namjestaj po mjeri" />
             </div>
             <div class="project-card__info">
-              <span class="project-card__cat">Kancelarijski Kompleks · Novi Sad</span>
-              <h3 class="project-card__title">Nova Zgrada RTV Vojvodine</h3>
-              <p class="project-card__subtext">Projektovanje enterijera redakcija, deskova i administrativnih prostora po standardima savremenih medijskih kuća.</p>
-              <span class="project-card__cta">Pogledaj <span>→</span></span>
+              <span class="project-card__cat">Kupatilo &middot; Unikatan Dizajn</span>
+              <h3 class="project-card__title">Retro Kupatilo po Mjeri</h3>
+              <p class="project-card__subtext">Kupatilski ormaric sa ogledalom i policama, vlagootporni materijali i prepoznatljivi retro stilski detalji.</p>
+              <span class="project-card__cta">Pogledaj <span>&rarr;</span></span>
             </div>
           </a>
 
-          <a href="javascript:void(0)" class="project-card project-card--sm" data-category="poslovni">
+          <!-- 6: Plakar -->
+          <a href="javascript:void(0)" class="project-card project-card--sm" data-category="plakar">
             <div class="project-card__img-wrap">
-              <img class="project-card__img"
-                src="https://www.nmartinproject.com/wp-content/uploads/2021/02/01-145x145.jpg"
-                data-src="https://www.nmartinproject.com/wp-content/uploads/2021/02/01.jpg"
-                alt="Javni Beležnik Vesna Milkov"
-                onerror="this.src='https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&q=80'" />
+              <img class="project-card__img" src="images/maestro/plakar.jpg" alt="Ugradni plakar po mjeri" />
             </div>
             <div class="project-card__info">
-              <span class="project-card__cat">Poslovni Enterijer · Novi Sad</span>
-              <h3 class="project-card__title">Javni Beležnik Vesna Milkov</h3>
-              <p class="project-card__subtext">Organizacija kancelarijskog prostora sa strogim odvajanjem prijema stranaka od zaštićene arhive.</p>
-              <span class="project-card__cta">Pogledaj <span>→</span></span>
+              <span class="project-card__cat">Plakar &middot; Pod-do-Plafon</span>
+              <h3 class="project-card__title">Plakar po Mjeri</h3>
+              <p class="project-card__subtext">Ugradbeni plakar od poda do plafona s optimalnom unutrasnjom organizacijom za odjecu, obucu i kucne potrepstine.</p>
+              <span class="project-card__cta">Pogledaj <span>&rarr;</span></span>
             </div>
           </a>
 
@@ -441,130 +606,118 @@
       </div>
     </section>
 
-    <!-- ══════════════════════════════════════
-         STUDIO / KAKO RADIMO
-    ══════════════════════════════════════ -->
+    <!-- O NAMA / KAKO RADIMO -->
     <section class="studio" id="studio">
       <div class="studio__micro-bar">
-        <span>021 · NOVI SAD</span>
-        <span>METODOLOGIJA &amp; INŽENJERING</span>
-        <span>01 / 03</span>
+        <span>BANJA LUKA &middot; BiH</span>
+        <span>ZANATSKA IZRADA &amp; MONTAZA</span>
+        <span>OD 2009. GODINE</span>
       </div>
       <div class="studio__split">
-        <!-- Left: dark text panel -->
         <div class="studio__text-panel">
-          <p class="studio__eyebrow">Pristup Projektovanju</p>
+          <p class="studio__eyebrow">Nas Pristup</p>
           <h2 class="studio__heading">
-            Rešenja na papiru<br>moraju da <em>funkcionišu</em><br>na gradilištu.
+            Mjera cini<br>razliku izmedju<br><em>namjestaja i doma.</em>
           </h2>
           <p class="studio__text">
-            Dobar projekat počinje od realnih parametara: orijentacije prema suncu, topografije terena, budžeta i načina na koji će klijent koristiti prostor. Ne namećemo prolazne trendove — tražimo logičan raspored, prirodno osvetljenje i materijale poput opeke, natur-betona, čelika i masiva drveta.
+            U MAESTRO radionici svaki komad nastaje na osnovu vasih dimenzija, zeljenih boja i nacina na koji koristite prostor. Ne radimo od gotovih modula &mdash; radimo tacno onako kako vi trazite.
           </p>
           <p class="studio__text">
-            Tim N-Martin čine licencirani arhitekti, građevinski inženjeri i dizajneri enterijera. Sa <strong>150+ realizovanih objekata</strong> u zemlji i inostranstvu — od prve skice do upotrebne dozvole.
+            Koristimo materijale provjerenog kvaliteta: <strong>Egger iveral i medijapan</strong>, furnir, LAK fronte i visoko sjajne folije. Sve zavrsavamo kvalitetnim okovom (Blum, Hettich) i dugotrajnim povrsinama.
           </p>
-          <a href="#kontakt" class="btn btn--gold" style="margin-top:2.5rem">Zakažite Sastanak <span class="btn__arrow">→</span></a>
+          <a href="#kontakt" class="btn btn--gold" style="margin-top:2.5rem">Zatrazite Besplatnu Ponudu <span class="btn__arrow">&rarr;</span></a>
         </div>
-        <!-- Right: full-bleed image -->
         <div class="studio__img-panel">
           <div class="studio__img-wrap--main">
             <img
               class="studio__img"
-              src="https://www.nmartinproject.com/wp-content/uploads/2024/06/4k-1-1-145x145.jpg"
-              data-src="https://www.nmartinproject.com/wp-content/uploads/2024/06/4k-1-1-scaled.jpg"
-              alt="Rezidencija Fruška Gora — N-Martin"
-              onerror="this.src='https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=900&q=80'"
+              src="images/projekti/garderober_klizni_ormar.jpg"
+              alt="Ugradbeni garderober s kliznim sistemom â€” MAESTRO Namjestaj"
             />
             <div class="studio__badge">
-              <span class="studio__badge-idx">01 / 03</span>
-              <span class="studio__badge-name">Rezidencija Fruška Gora · Banoštor</span>
+              <span class="studio__badge-idx">02</span>
+              <span class="studio__badge-name">Garderober s Kliznim Vratima &middot; Banja Luka</span>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ══════════════════════════════════════
-         POKRETNA TRAKA USLUGA (MARQUEE)
-    ══════════════════════════════════════ -->
+    <!-- MARQUEE -->
     <div class="marquee-strip" aria-hidden="true">
       <div class="marquee-track">
-        <span>Arhitektura</span><span class="sep">·</span>
-        <span>Enterijer</span><span class="sep">·</span>
-        <span>Urbanizam</span><span class="sep">·</span>
-        <span>Dizajn Nameštaja</span><span class="sep">·</span>
-        <span>Energetska Efikasnost</span><span class="sep">·</span>
-        <span>Studio Novi Sad</span><span class="sep">·</span>
-        <span>Arhitektura</span><span class="sep">·</span>
-        <span>Enterijer</span><span class="sep">·</span>
-        <span>Urbanizam</span><span class="sep">·</span>
-        <span>Dizajn Nameštaja</span><span class="sep">·</span>
-        <span>Energetska Efikasnost</span><span class="sep">·</span>
-        <span>Studio Novi Sad</span><span class="sep">·</span>
+        <span>Kuhinje po Mjeri</span><span class="sep">&middot;</span>
+        <span>Ugradni Plakari</span><span class="sep">&middot;</span>
+        <span>Dnevne Sobe</span><span class="sep">&middot;</span>
+        <span>Spavace Sobe</span><span class="sep">&middot;</span>
+        <span>Kupatilski Namjestaj</span><span class="sep">&middot;</span>
+        <span>Djecije Sobe</span><span class="sep">&middot;</span>
+        <span>Kancelarijski Namjestaj</span><span class="sep">&middot;</span>
+        <span>Hodnici &amp; Predsoblja</span><span class="sep">&middot;</span>
+        <span>Kuhinje po Mjeri</span><span class="sep">&middot;</span>
+        <span>Ugradni Plakari</span><span class="sep">&middot;</span>
+        <span>Dnevne Sobe</span><span class="sep">&middot;</span>
+        <span>Spavace Sobe</span><span class="sep">&middot;</span>
+        <span>Kupatilski Namjestaj</span><span class="sep">&middot;</span>
+        <span>Djecije Sobe</span><span class="sep">&middot;</span>
+        <span>Kancelarijski Namjestaj</span><span class="sep">&middot;</span>
+        <span>Hodnici &amp; Predsoblja</span><span class="sep">&middot;</span>
       </div>
     </div>
 
-    <!-- ══════════════════════════════════════
-         STATISTIKA / REZULTATI (EQUAL HEIGHTS)
-    ══════════════════════════════════════ -->
+    <!-- STATISTIKE -->
     <section class="stats">
       <div class="stats__row">
           <div class="stat">
             <div class="stat__val">
-              <span class="stat__num" data-target="20">0</span><span class="stat__plus">+</span>
+              <span class="stat__num" data-target="15">0</span><span class="stat__plus">+</span>
             </div>
-            <span class="stat__label">Godina Rada (2005–2025)</span>
+            <span class="stat__label">Godina Iskustva (2009&ndash;2025)</span>
           </div>
           <div class="stat">
             <div class="stat__val">
-              <span class="stat__num" data-target="150">0</span><span class="stat__plus">+</span>
+              <span class="stat__num" data-target="500">0</span><span class="stat__plus">+</span>
             </div>
-            <span class="stat__label">Završenih Objekata</span>
-          </div>
-          <div class="stat">
-            <div class="stat__val">
-              <span class="stat__num" data-target="50">0</span><span class="stat__plus">k+</span>
-            </div>
-            <span class="stat__label">m² Projektovano</span>
+            <span class="stat__label">Zadovoljnih Klijenata</span>
           </div>
           <div class="stat">
             <div class="stat__val">
               <span class="stat__num" data-target="100">0</span><span class="stat__plus">%</span>
             </div>
-            <span class="stat__label">Licencirani Inženjeri</span>
+            <span class="stat__label">Namjestaj po Mjeri</span>
+          </div>
+          <div class="stat">
+            <div class="stat__val">
+              <span class="stat__num" data-target="48">0</span><span class="stat__plus">h</span>
+            </div>
+            <span class="stat__label">Rok Odgovora na Upit</span>
           </div>
       </div>
     </section>
 
-    <!-- ══════════════════════════════════════
-         CITAT / IMAGE BREAK
-    ══════════════════════════════════════ -->
+    <!-- CITAT / IMAGE BREAK -->
     <div class="image-break">
       <div class="image-break__inner">
         <img
           class="image-break__img"
-          src="https://www.nmartinproject.com/wp-content/uploads/2021/02/Plazonic-zgrada-1-01-145x145.jpg"
-          data-src="https://www.nmartinproject.com/wp-content/uploads/2021/02/Plazonic-zgrada-1-01.jpg"
-          alt="Poslovni Objekat Novi Sad — N-Martin"
-          onerror="this.src='https://images.unsplash.com/photo-1486325212027-8081e485255e?w=1920&q=80'"
+          src="images/projekti/kuhinja_tamni_akcenti.jpg"
+          alt="MAESTRO â€” Namjestaj po mjeri Banja Luka"
         />
         <div class="image-break__overlay">
           <blockquote class="image-break__quote">
-            „Dobar prostor ne traži objašnjenje. Njegov kvalitet se oseti čim kročite u njega.“
+            &bdquo;Nasa osnovna djelatnost je proizvodnja namjestaja po mjeri &mdash; mogucnost izbora boje, dizajna i materijalizacije je neprocjenjiva.&ldquo;
           </blockquote>
         </div>
-        <div class="image-break__word">Forma</div>
+        <div class="image-break__word">Zanat</div>
       </div>
     </div>
 
-    <!-- ══════════════════════════════════════
-         USLUGE
-    ══════════════════════════════════════ -->
+    <!-- USLUGE -->
     <section class="services" id="usluge">
       <div class="container">
         <div class="services__top">
-          <h2 class="services__big reveal">Šta<br><em>radimo.</em></h2>
-          <p class="services__intro reveal delay-1">Pratimo vas od prvog skice do ključeva u ruci — arhitektonsko projektovanje, enterijer, urbanizam i nameštaj po meri. Svaki projekat vode licencirani stručnjaci N-Martin tima.</p>
+          <h2 class="services__big reveal">Sta<br><em>radimo.</em></h2>
+          <p class="services__intro reveal delay-1">Od ideje do montaze &mdash; pratimo vas kroz cijeli proces izrade namjestaja. Besplatna mjerenja, konsultacije i priprema 3D nacrta ukljuceni su u svaku ponudu.</p>
         </div>
         <div class="services__grid">
 
@@ -572,151 +725,306 @@
             <div class="service-card__num">01</div>
             <div class="service-card__icon">
               <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M4 28V12L16 4L28 12V28H20V20H12V28H4Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+                <rect x="4" y="8" width="24" height="16" stroke="currentColor" stroke-width="1.5"/>
+                <path d="M4 14h24M10 14v10M22 14v10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
               </svg>
             </div>
-            <h3 class="service-card__title">Arhitektonsko Projektovanje</h3>
-            <p class="service-card__desc">Idejna rešenja (IDR), projekti za građevinsku dozvolu (PGD) i projekti za izvođenje (PZI) za porodične kuće, stambene zgrade i privredne objekte.</p>
-            <a href="#kontakt" class="service-card__link">Pošaljite Upit <span>→</span></a>
+            <h3 class="service-card__title">Kuhinje po Mjeri</h3>
+            <p class="service-card__desc">Projektovanje i izrada kuhinja s podnim i visecim elementima, radnom plocom, ugradbenom tehnikom i integriranom rasvjetom. Svaka kuhinja se radi prema dimenzijama vaseg prostora.</p>
+            <a href="#kontakt" class="service-card__link">Zatrazite Ponudu <span>&rarr;</span></a>
           </div>
 
           <div class="service-card">
             <div class="service-card__num">02</div>
             <div class="service-card__icon">
               <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect x="4" y="4" width="10" height="10" stroke="currentColor" stroke-width="1.5"/>
-                <rect x="18" y="4" width="10" height="10" stroke="currentColor" stroke-width="1.5"/>
-                <rect x="4" y="18" width="10" height="10" stroke="currentColor" stroke-width="1.5"/>
-                <rect x="18" y="18" width="10" height="10" stroke="currentColor" stroke-width="1.5"/>
+                <rect x="5" y="4" width="22" height="24" stroke="currentColor" stroke-width="1.5"/>
+                <path d="M5 14h22M5 20h22M12 4v24M20 4v24" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
               </svg>
             </div>
-            <h3 class="service-card__title">Dizajn Enterijera</h3>
-            <p class="service-card__desc">Kompletna razrada enterijera: funkcionalno zoniranje, planovi rasvete i instalacija, izbor keramike, podova i boja, uz detaljne 3D vizuelizacije.</p>
-            <a href="#kontakt" class="service-card__link">Pošaljite Upit <span>→</span></a>
+            <h3 class="service-card__title">Ugradni Plakari</h3>
+            <p class="service-card__desc">Plakari po mjeri od poda do plafona s kliznim ili sarkirnim sistemom, unutrasnjim organizatorima, ogledalom i LED rasvjetom. Idealni za spavace sobe i hodnike.</p>
+            <a href="#kontakt" class="service-card__link">Zatrazite Ponudu <span>&rarr;</span></a>
           </div>
 
           <div class="service-card">
             <div class="service-card__num">03</div>
             <div class="service-card__icon">
               <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M4 26H28M8 26V14M16 26V8M24 26V14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                <rect x="4" y="16" width="24" height="12" stroke="currentColor" stroke-width="1.5"/>
+                <rect x="8" y="4" width="16" height="12" stroke="currentColor" stroke-width="1.5"/>
+                <path d="M4 16h24" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
               </svg>
             </div>
-            <h3 class="service-card__title">Urbanizam i Dozvole</h3>
-            <p class="service-card__desc">Urbanistički projekti, preparcelacija, provera planske dokumentacije, pribavljanje lokacijskih uslova i vođenje administrativnih procedura do upotrebne dozvole.</p>
-            <a href="#kontakt" class="service-card__link">Pošaljite Upit <span>→</span></a>
+            <h3 class="service-card__title">Dnevne &amp; Spavace Sobe</h3>
+            <p class="service-card__desc">Kompletno opremanje dnevnih i spacih soba &mdash; TV elementi, police, kreveti, nocni ormarici i komode. Sve u jednom stilu i jednoj boji prema vasem izboru.</p>
+            <a href="#kontakt" class="service-card__link">Zatrazite Ponudu <span>&rarr;</span></a>
           </div>
 
           <div class="service-card">
             <div class="service-card__num">04</div>
             <div class="service-card__icon">
               <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="16" cy="16" r="12" stroke="currentColor" stroke-width="1.5"/>
-                <path d="M16 8V16L22 20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                <path d="M6 26V10a2 2 0 012-2h16a2 2 0 012 2v16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                <path d="M4 26h24M12 18h8M12 22h8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                <circle cx="16" cy="12" r="2" stroke="currentColor" stroke-width="1.5"/>
               </svg>
             </div>
-            <h3 class="service-card__title">Nameštaj po Meri</h3>
-            <p class="service-card__desc">Detaljni radionički crteži za stolarsku i bravarsku izradu. Projektovanje kuhinja, ugradnih plakara i unikatnih elemenata skrojenih u milimetar.</p>
-            <a href="#kontakt" class="service-card__link">Pošaljite Upit <span>→</span></a>
+            <h3 class="service-card__title">Kupatilski Namjestaj</h3>
+            <p class="service-card__desc">Viseci kupatilski elementi otporni na vlagu s umivaonikom, ogledalom i osvjetljenjem. Djecije sobe, kancelarije i poslovni prostori &mdash; sve po mjeri i po vasem ukusu.</p>
+            <a href="#kontakt" class="service-card__link">Zatrazite Ponudu <span>&rarr;</span></a>
           </div>
 
         </div>
       </div>
     </section>
 
-    <!-- ══════════════════════════════════════
-         JOŠ PROJEKATA — HORIZONTALNA GALERIJA
-    ══════════════════════════════════════ -->
+    <!-- RECENZIJE / TESTIMONIALS -->
+    <section class="testimonials-section" id="recenzije">
+      <div class="container">
+        <div class="testimonials-header reveal">
+          <div class="testimonials-header__left">
+            <span class="label-tag">Zadovoljni Klijenti</span>
+            <h2 class="testimonials-heading">Vase povjerenje nam<br><em>najvise znaci.</em></h2>
+          </div>
+          <div class="google-badge">
+            <div class="google-badge__stars">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="#F59E0B"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="#F59E0B"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="#F59E0B"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="#F59E0B"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="#F59E0B"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            </div>
+            <div class="google-badge__meta">
+              <span class="google-badge__score">5.0 Ocjena</span>
+              <span class="google-badge__source">Google &amp; Facebook recenzije</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonials-carousel" aria-label="Komentari klijenata">
+        <div class="testimonials-track">
+          
+          <!-- Set 1: 5 Recenzija -->
+          <article class="testi-card">
+            <div class="testi-card__stars">
+              <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+            </div>
+            <p class="testi-card__quote">&bdquo;Kuhinja je ispala tacno u milimetar kako smo zamisljali! Preciznost u radu, kvalitet lakiranog medijapana i montaza na vrijeme. Sve preporuke za MAESTRO.&ldquo;</p>
+            <div class="testi-card__author">
+              <div class="testi-card__avatar">SM</div>
+              <div>
+                <h5 class="testi-card__name">Sanja Milicevic</h5>
+                <p class="testi-card__role">Kuhinja po mjeri &middot; Banja Luka</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="testi-card">
+            <div class="testi-card__stars">
+              <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+            </div>
+            <p class="testi-card__quote">&bdquo;Opremili su nam kompletan stan &mdash; kuhinju, americke plakare i TV policu sa drvenim letvicama i LED rasvjetom. Majstori su profesionalni i uredni, sve pohvale!&ldquo;</p>
+            <div class="testi-card__author">
+              <div class="testi-card__avatar">DK</div>
+              <div>
+                <h5 class="testi-card__name">Dragan Kovacevic</h5>
+                <p class="testi-card__role">Kompletno opremanje &middot; Banja Luka</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="testi-card">
+            <div class="testi-card__stars">
+              <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+            </div>
+            <p class="testi-card__quote">&bdquo;Najbolji odnos cijene i kvaliteta u gradu. Pomogli su nam oko izbora materijala i boja, a ugradni ormar je maksimalno iskoristio prostor spavace sobe.&ldquo;</p>
+            <div class="testi-card__author">
+              <div class="testi-card__avatar">JB</div>
+              <div>
+                <h5 class="testi-card__name">Jelena Babic</h5>
+                <p class="testi-card__role">Spavaca soba &amp; plakar &middot; Banja Luka</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="testi-card">
+            <div class="testi-card__stars">
+              <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+            </div>
+            <p class="testi-card__quote">&bdquo;Svaka cast majstorima, Compact ploca i sudoper Blanco ugradjeni besprekorno. Rijetko se danas nadje neko ko ovoliko pazi na svaki detalj.&ldquo;</p>
+            <div class="testi-card__author">
+              <div class="testi-card__avatar">MR</div>
+              <div>
+                <h5 class="testi-card__name">Marko Radulovic</h5>
+                <p class="testi-card__role">Kuhinja i trpezarija &middot; Banja Luka</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="testi-card">
+            <div class="testi-card__stars">
+              <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+            </div>
+            <p class="testi-card__quote">&bdquo;Prezadovoljna sam kupatilskim namjestajem i cipelarom za hodnik. Sve uradjeno kvalitetno od vlagootpornih materijala. Saradjivacemo sigurno ponovo!&ldquo;</p>
+            <div class="testi-card__author">
+              <div class="testi-card__avatar">NT</div>
+              <div>
+                <h5 class="testi-card__name">Nikolina Tomic</h5>
+                <p class="testi-card__role">Kupatilo i hodnik &middot; Banja Luka</p>
+              </div>
+            </div>
+          </article>
+
+          <!-- Set 2: Duplicate za seamless infinite marquee -->
+          <article class="testi-card" aria-hidden="true">
+            <div class="testi-card__stars">
+              <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+            </div>
+            <p class="testi-card__quote">&bdquo;Kuhinja je ispala tacno u milimetar kako smo zamisljali! Preciznost u radu, kvalitet lakiranog medijapana i montaza na vrijeme. Sve preporuke za MAESTRO.&ldquo;</p>
+            <div class="testi-card__author">
+              <div class="testi-card__avatar">SM</div>
+              <div>
+                <h5 class="testi-card__name">Sanja Milicevic</h5>
+                <p class="testi-card__role">Kuhinja po mjeri &middot; Banja Luka</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="testi-card" aria-hidden="true">
+            <div class="testi-card__stars">
+              <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+            </div>
+            <p class="testi-card__quote">&bdquo;Opremili su nam kompletan stan &mdash; kuhinju, americke plakare i TV policu sa drvenim letvicama i LED rasvjetom. Majstori su profesionalni i uredni, sve pohvale!&ldquo;</p>
+            <div class="testi-card__author">
+              <div class="testi-card__avatar">DK</div>
+              <div>
+                <h5 class="testi-card__name">Dragan Kovacevic</h5>
+                <p class="testi-card__role">Kompletno opremanje &middot; Banja Luka</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="testi-card" aria-hidden="true">
+            <div class="testi-card__stars">
+              <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+            </div>
+            <p class="testi-card__quote">&bdquo;Najbolji odnos cijene i kvaliteta u gradu. Pomogli su nam oko izbora materijala i boja, a ugradni ormar je maksimalno iskoristio prostor spavace sobe.&ldquo;</p>
+            <div class="testi-card__author">
+              <div class="testi-card__avatar">JB</div>
+              <div>
+                <h5 class="testi-card__name">Jelena Babic</h5>
+                <p class="testi-card__role">Spavaca soba &amp; plakar &middot; Banja Luka</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="testi-card" aria-hidden="true">
+            <div class="testi-card__stars">
+              <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+            </div>
+            <p class="testi-card__quote">&bdquo;Svaka cast majstorima, Compact ploca i sudoper Blanco ugradjeni besprekorno. Rijetko se danas nadje neko ko ovoliko pazi na svaki detalj.&ldquo;</p>
+            <div class="testi-card__author">
+              <div class="testi-card__avatar">MR</div>
+              <div>
+                <h5 class="testi-card__name">Marko Radulovic</h5>
+                <p class="testi-card__role">Kuhinja i trpezarija &middot; Banja Luka</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="testi-card" aria-hidden="true">
+            <div class="testi-card__stars">
+              <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+            </div>
+            <p class="testi-card__quote">&bdquo;Prezadovoljna sam kupatilskim namjestajem i cipelarom za hodnik. Sve uradjeno kvalitetno od vlagootpornih materijala. Saradjivacemo sigurno ponovo!&ldquo;</p>
+            <div class="testi-card__author">
+              <div class="testi-card__avatar">NT</div>
+              <div>
+                <h5 class="testi-card__name">Nikolina Tomic</h5>
+                <p class="testi-card__role">Kupatilo i hodnik &middot; Banja Luka</p>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- HORIZONTALNA GALERIJA -->
     <section class="more-projects">
       <div class="container">
         <div class="section-header">
-          <span class="label-tag">Arhiva Izvedenih Objekata</span>
+          <span class="label-tag">Galerija Detalja i Montaze</span>
         </div>
       </div>
-      <div class="horiz-scroll" id="horizScroll" tabindex="0" aria-label="Horizontalna galerija projekata">
+      <div class="horiz-scroll" id="horizScroll" tabindex="0" aria-label="Horizontalna galerija detalja MAESTRO namjestaja">
         <div class="horiz-scroll__track">
 
+          <!-- 1: Kuhinja s tamnim akcentima -->
           <a href="javascript:void(0)" class="horiz-card">
             <div class="horiz-card__img-wrap">
-              <img class="horiz-card__img"
-                src="https://www.nmartinproject.com/wp-content/uploads/2021/02/01-1-145x145.jpg"
-                data-src="https://www.nmartinproject.com/wp-content/uploads/2021/02/01-1.jpg"
-                alt="Muzej Konaka Zlatibor"
-                onerror="this.src='https://images.unsplash.com/photo-1577495917889-a6f73e0e8d5d?w=500&q=80'" />
+              <img class="horiz-card__img" src="images/maestro/kuhinjasatamninakcentima.webp" alt="Kuhinja s tamnim akcentima" />
             </div>
             <div class="horiz-card__info">
-              <span class="horiz-card__cat">Kulturno Nasleđe · Zlatibor</span>
-              <h4 class="horiz-card__title">Muzej Konaka</h4>
+              <span class="horiz-card__cat">Kuhinja &middot; Visoki Sjaj</span>
+              <h4 class="horiz-card__title">Kuhinja s Tamnim Akcentima</h4>
             </div>
           </a>
 
+          <!-- 2: Kompletno opremanje -->
           <a href="javascript:void(0)" class="horiz-card">
             <div class="horiz-card__img-wrap">
-              <img class="horiz-card__img"
-                src="https://www.nmartinproject.com/wp-content/uploads/2021/06/35-145x145.jpg"
-                data-src="https://www.nmartinproject.com/wp-content/uploads/2021/06/35.jpg"
-                alt="Vrtić Čarolija Zemun"
-                onerror="this.src='https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=500&q=80'" />
+              <img class="horiz-card__img" src="images/maestro/kompletno%20n.jpg" alt="Kompletno opremanje stana" />
             </div>
             <div class="horiz-card__info">
-              <span class="horiz-card__cat">Objekat za Decu · Zemun</span>
-              <h4 class="horiz-card__title">Vrtić Čarolija</h4>
+              <span class="horiz-card__cat">Enterijer &middot; Po Mjeri</span>
+              <h4 class="horiz-card__title">Kompletno Opremanje</h4>
             </div>
           </a>
 
+          <!-- 3: Kompletan set spavace sobe -->
           <a href="javascript:void(0)" class="horiz-card">
             <div class="horiz-card__img-wrap">
-              <img class="horiz-card__img"
-                src="https://www.nmartinproject.com/wp-content/uploads/2021/08/PXL_20210222_084610657-145x145.jpg"
-                data-src="https://www.nmartinproject.com/wp-content/uploads/2021/08/PXL_20210222_084610657.jpg"
-                alt="Knjižara Geca Kon Beograd"
-                onerror="this.src='https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?w=500&q=80'" />
+              <img class="horiz-card__img" src="images/maestro/spavacasoba.jpg" alt="Kompletan set spavace sobe" />
             </div>
             <div class="horiz-card__info">
-              <span class="horiz-card__cat">Komercijalni Prostor · Beograd</span>
-              <h4 class="horiz-card__title">Knjižara Geca Kon</h4>
+              <span class="horiz-card__cat">Spavaca Soba &middot; Komplet</span>
+              <h4 class="horiz-card__title">Kompletan Set Spavace Sobe</h4>
             </div>
           </a>
 
+          <!-- 4: Kompletan stan -->
           <a href="javascript:void(0)" class="horiz-card">
             <div class="horiz-card__img-wrap">
-              <img class="horiz-card__img"
-                src="https://www.nmartinproject.com/wp-content/uploads/2021/02/R1-145x145.jpg"
-                data-src="https://www.nmartinproject.com/wp-content/uploads/2021/02/R1.jpg"
-                alt="Porodična kuća Novi Sad"
-                onerror="this.src='https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?w=500&q=80'" />
+              <img class="horiz-card__img" src="images/maestro/nicestancic.webp" alt="Kompletan stan po mjeri" />
             </div>
             <div class="horiz-card__info">
-              <span class="horiz-card__cat">Porodična Vila · Novi Sad</span>
-              <h4 class="horiz-card__title">Porodična Kuća Novi Sad</h4>
+              <span class="horiz-card__cat">Stan &middot; Kompletno Uredenje</span>
+              <h4 class="horiz-card__title">Kompletan Stan po Mjeri</h4>
             </div>
           </a>
 
+          <!-- 5: Retro kupatilo -->
           <a href="javascript:void(0)" class="horiz-card">
             <div class="horiz-card__img-wrap">
-              <img class="horiz-card__img"
-                src="https://www.nmartinproject.com/wp-content/uploads/2021/02/Citaonica-145x145.jpg"
-                data-src="https://www.nmartinproject.com/wp-content/uploads/2021/02/Citaonica.jpg"
-                alt="Čitaonica Svetozar Miletić"
-                onerror="this.src='https://images.unsplash.com/photo-1513519245088-0e12902e5a38?w=500&q=80'" />
+              <img class="horiz-card__img" src="images/maestro/retrowc.webp" alt="Retro kupatilo po mjeri" />
             </div>
             <div class="horiz-card__info">
-              <span class="horiz-card__cat">Kulturna Ustanova · Novi Sad</span>
-              <h4 class="horiz-card__title">Čitaonica Svetozar Miletić</h4>
+              <span class="horiz-card__cat">Kupatilo &middot; Unikatan Dizajn</span>
+              <h4 class="horiz-card__title">Retro Kupatilo po Mjeri</h4>
             </div>
           </a>
 
+          <!-- 6: Plakar -->
           <a href="javascript:void(0)" class="horiz-card">
             <div class="horiz-card__img-wrap">
-              <img class="horiz-card__img"
-                src="https://www.nmartinproject.com/wp-content/uploads/2024/06/Image24-145x145.png"
-                data-src="https://www.nmartinproject.com/wp-content/uploads/2024/06/Image24.png"
-                alt="Porodična kuća Požega"
-                onerror="this.src='https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=500&q=80'" />
+              <img class="horiz-card__img" src="images/maestro/plakar.jpg" alt="Plakar po mjeri" />
             </div>
             <div class="horiz-card__info">
-              <span class="horiz-card__cat">Stambeni Objekat · Požega</span>
-              <h4 class="horiz-card__title">Porodična Kuća Požega</h4>
+              <span class="horiz-card__cat">Plakar &middot; Pod-do-Plafon</span>
+              <h4 class="horiz-card__title">Plakar po Mjeri</h4>
             </div>
           </a>
 
@@ -724,40 +1032,33 @@
       </div>
     </section>
 
-    <!-- ══════════════════════════════════════
-         KONTAKT SEKCIJA
-    ══════════════════════════════════════ -->
+    <!-- KONTAKT -->
     <section class="contact" id="kontakt">
       <div class="container">
         <div class="contact__grid">
           <div class="contact__left">
             <span class="label-tag">Kontakt</span>
-            <h2 class="contact__heading">Planirate novi objekat<br>ili <em>preuređenje prostora?</em></h2>
-            <p class="contact__sub">Pošaljite nam lokaciju parcele, planiranu kvadraturu ili osnovne zahteve. Zakažite inicijalni razgovor sa našim inženjerskim timom u studiju ili putem video poziva.</p>
+            <h2 class="contact__heading">Imate ideju za<br>novi <em>namjestaj?</em></h2>
+            <p class="contact__sub">Posaljite nam dimenzije prostora ili nas pozovite &mdash; dolazimo na vasu adresu s uzorcima materijala i idejama. Besplatna konsultacija i mjerenje.</p>
 
             <div class="contact__details">
               <div class="contact__detail">
-                <span class="contact__detail-label">Studio & Biro (Novi Sad)</span>
-                <span class="contact__detail-value">Miroslava Antića 7 / Danila Kiša 17, Novi Sad</span>
+                <span class="contact__detail-label">Adresa Radionice</span>
+                <span class="contact__detail-value">Kojica put br. 4, Banja Luka 78000, BiH</span>
               </div>
               <div class="contact__detail">
-                <span class="contact__detail-label">Telefon Srbija</span>
-                <a href="tel:+38121424817" class="contact__detail-value">+381 21 424 817</a>
-              </div>
-              <div class="contact__detail">
-                <span class="contact__detail-label">Kancelarija Njujork</span>
-                <a href="tel:+19292492333" class="contact__detail-value">+1 929 249 2333</a>
+                <span class="contact__detail-label">Telefon / Viber / WhatsApp</span>
+                <a href="tel:+38765544921" class="contact__detail-value">+387 65 544-921</a>
               </div>
               <div class="contact__detail">
                 <span class="contact__detail-label">Email Adresa</span>
-                <a href="mailto:nikola@nmartinproject.com" class="contact__detail-value">nikola@nmartinproject.com</a>
+                <a href="mailto:maestro.namjestaj@gmail.com" class="contact__detail-value">maestro.namjestaj@gmail.com</a>
               </div>
               <div class="contact__detail">
-                <span class="contact__detail-label">Pratite Studio</span>
+                <span class="contact__detail-label">Pratite Nase Radove</span>
                 <div class="contact__social">
-                  <a href="http://www.facebook.com/pages/N-martin-architectural-studio/144999842182833" target="_blank" rel="noopener noreferrer">Facebook</a>
-                  <a href="http://www.linkedin.com/pub/nikola-martinovic/6/58b/953" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-                  <a href="http://www.architizer.com/en_us/firms/view/n-martin/9493/" target="_blank" rel="noopener noreferrer">Architizer</a>
+                  <a href="https://www.facebook.com/namjestaj.maestro/" target="_blank" rel="noopener noreferrer">Facebook</a>
+                  <a href="https://www.instagram.com/miroslavmaestro_namjestaj/" target="_blank" rel="noopener noreferrer">Instagram</a>
                 </div>
               </div>
             </div>
@@ -766,35 +1067,37 @@
           <div class="contact__right">
             <form class="contact__form" id="contactForm">
               <div class="form-row">
-                <label class="form-label" for="fname">Vaše Ime i Prezime</label>
-                <input type="text" id="fname" name="name" class="form-input" placeholder="npr. Marko Petrović" required />
+                <label class="form-label" for="fname">Vase Ime i Prezime</label>
+                <input type="text" id="fname" name="name" class="form-input" placeholder="npr. Marko Petrovic" required />
               </div>
               <div class="form-row">
                 <label class="form-label" for="femail">Email Adresa</label>
                 <input type="email" id="femail" name="email" class="form-input" placeholder="vas@email.com" required />
               </div>
               <div class="form-row">
-                <label class="form-label" for="fphone">Broj Telefona (opciono)</label>
-                <input type="tel" id="fphone" name="phone" class="form-input" placeholder="+381 6x xxx xxxx" />
+                <label class="form-label" for="fphone">Broj Telefona</label>
+                <input type="tel" id="fphone" name="phone" class="form-input" placeholder="+387 6x xxx xxx" />
               </div>
               <div class="form-row">
-                <label class="form-label" for="fproject">Vrsta Projekta</label>
+                <label class="form-label" for="fproject">Vrsta Namjestaja</label>
                 <select id="fproject" name="project" class="form-input form-select" required>
-                  <option value="">Izaberite vrstu objekta / usluge...</option>
-                  <option>Porodična kuća ili vila</option>
-                  <option>Stambeno-poslovni objekat</option>
-                  <option>Dizajn i opremanje enterijera</option>
-                  <option>Javni, školski ili sportski objekat</option>
-                  <option>Autorski nameštaj po meri</option>
-                  <option>Urbanizam i lokacijski uslovi</option>
-                  <option>Drugo</option>
+                  <option value="">Izaberite vrstu namjestaja...</option>
+                  <option>Kuhinja po mjeri</option>
+                  <option>Ugradni plakar</option>
+                  <option>Spavaca soba (komplet)</option>
+                  <option>Dnevni boravak / TV element</option>
+                  <option>Kupatilski namjestaj</option>
+                  <option>Djecija soba</option>
+                  <option>Kancelarijski namjestaj</option>
+                  <option>Hodnik / predsoblje</option>
+                  <option>Ostalo / kombinirano</option>
                 </select>
               </div>
               <div class="form-row">
-                <label class="form-label" for="fmessage">Opis Projekta i Zahtevi</label>
-                <textarea id="fmessage" name="message" class="form-input form-textarea" rows="4" placeholder="Navedite lokaciju parcele, okvirnu kvadraturu i planirani početak radova..."></textarea>
+                <label class="form-label" for="fmessage">Opis i Dimenzije Prostora</label>
+                <textarea id="fmessage" name="message" class="form-input form-textarea" rows="4" placeholder="Opisite sta trebate &mdash; dimenzije prostora, zeljene boje i materijale..."></textarea>
               </div>
-              <button type="submit" class="btn btn--gold btn--full">Pošaljite Upit <span class="btn__arrow">→</span></button>
+              <button type="submit" class="btn btn--gold btn--full">Posaljite Upit <span class="btn__arrow">&rarr;</span></button>
             </form>
           </div>
         </div>
@@ -803,42 +1106,40 @@
 
   </main>
 
-  <!-- ══════════════════════════════════════
-       FUTER
-  ══════════════════════════════════════ -->
+  <!-- FUTER -->
   <footer class="footer">
     <div class="container">
       <div class="footer__grid">
         <div class="footer__brand">
-          <div class="footer__logo">N—MARTIN</div>
-          <p class="footer__tagline">Arhitektonski Biro<br />Novi Sad & New York</p>
+          <div class="footer__logo">MAESTRO</div>
+          <p class="footer__tagline">Namjestaj po Mjeri<br />Banja Luka &middot; Bosna i Hercegovina<br />Sladana Mandic s.p.</p>
         </div>
         <div class="footer__nav">
           <ul>
-            <li><a href="#projekti">Projekti</a></li>
-            <li><a href="#studio">Studio</a></li>
+            <li><a href="#radovi">Radovi</a></li>
+            <li><a href="#o-nama">O Nama</a></li>
             <li><a href="#usluge">Usluge</a></li>
             <li><a href="#kontakt">Kontakt</a></li>
           </ul>
         </div>
         <div class="footer__contact">
-          <p><a href="mailto:nikola@nmartinproject.com">nikola@nmartinproject.com</a></p>
-          <p>Miroslava Antića 7, Novi Sad</p>
-          <p>Tel: +381 21 424 817</p>
+          <p><a href="tel:+38765544921">+387 65 544-921</a></p>
+          <p><a href="mailto:maestro.namjestaj@gmail.com">maestro.namjestaj@gmail.com</a></p>
+          <p>Kojica put 4, Banja Luka</p>
         </div>
         <div class="footer__social">
-          <a href="http://www.facebook.com/pages/N-martin-architectural-studio/144999842182833" target="_blank" rel="noopener noreferrer">Facebook</a>
-          <a href="http://www.linkedin.com/pub/nikola-martinovic/6/58b/953" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-          <a href="http://www.architizer.com/en_us/firms/view/n-martin/9493/" target="_blank" rel="noopener noreferrer">Architizer</a>
+          <a href="https://www.facebook.com/namjestaj.maestro/" target="_blank" rel="noopener noreferrer">Facebook</a>
+          <a href="https://www.instagram.com/miroslavmaestro_namjestaj/" target="_blank" rel="noopener noreferrer">Instagram</a>
+          <a href="tel:+38765544921">Pozovite nas</a>
         </div>
       </div>
       <div class="footer__bottom">
-        <p>© 2026 N-Martin Arhitektonski Studio. Sva prava zadržana.</p>
-        <p>Arhitektura · Inženjering · Izvođenje</p>
+        <p>&copy; 2026 Proizvodnja, zanatstvo i usluge &bdquo;MAESTRO&ldquo; Sladana Mandic s.p. Sva prava zadrzana.</p>
+        <p>Namjestaj po Mjeri &middot; Kuhinje &middot; Plakari &middot; Enterijeri</p>
       </div>
     </div>
   </footer>
 
-  <script src="script.js?v=15" defer></script>
+  <script src="script.js?v=20" defer></script>
 </body>
 </html>

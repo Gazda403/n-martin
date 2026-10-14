@@ -862,3 +862,181 @@ a.contact__detail-value:hover{color:var(--clr-gold)}
   .footer__grid{grid-template-columns:1fr}
   .hero__meta-bar{flex-direction:column;align-items:flex-start;gap:1.25rem}
 }
+
+
+/* ── RECENZIJE / TESTIMONIALS (COOL TESTIMONIALS SKILL) ── */
+.testimonials-section {
+  padding: clamp(4rem, 8vw, 8rem) 0;
+  background: var(--clr-cream);
+  overflow: hidden;
+  position: relative;
+}
+.testimonials-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: clamp(2.5rem, 5vw, 4.5rem);
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+.testimonials-heading {
+  font-family: var(--ff-display);
+  font-size: clamp(2.2rem, 5vw, 3.8rem);
+  font-weight: 300;
+  line-height: 1.15;
+  color: var(--clr-charcoal);
+  margin-top: 0.75rem;
+}
+.testimonials-heading em {
+  font-style: italic;
+  font-family: var(--ff-serif);
+  color: var(--clr-gold);
+}
+.google-badge {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  background: var(--clr-parchment);
+  border: 1px solid var(--clr-charcoal-10);
+  padding: 1.25rem 1.75rem;
+  border-radius: 9999px;
+  box-shadow: 0 4px 20px rgba(26,25,22,0.04);
+}
+.google-badge__stars {
+  display: flex;
+  gap: 3px;
+}
+.google-badge__meta {
+  display: flex;
+  flex-direction: column;
+}
+.google-badge__score {
+  font-family: var(--ff-sans-display);
+  font-size: var(--fs-md);
+  font-weight: 700;
+  color: var(--clr-charcoal);
+  line-height: 1.2;
+}
+.google-badge__source {
+  font-size: var(--fs-xs);
+  color: var(--clr-warm-gray);
+  letter-spacing: 0.05em;
+}
+.testimonials-carousel {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding: 1.5rem 0;
+}
+.testimonials-carousel::before,
+.testimonials-carousel::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: clamp(40px, 8vw, 140px);
+  z-index: 2;
+  pointer-events: none;
+}
+.testimonials-carousel::before {
+  left: 0;
+  background: linear-gradient(to right, var(--clr-cream), transparent);
+}
+.testimonials-carousel::after {
+  right: 0;
+  background: linear-gradient(to left, var(--clr-cream), transparent);
+}
+.testimonials-track {
+  display: flex;
+  gap: 2rem;
+  width: max-content;
+  animation: testimonialsScroll 38s linear infinite;
+}
+.testimonials-track:hover {
+  animation-play-state: paused;
+}
+@keyframes testimonialsScroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(calc(-50% - 1rem)); }
+}
+.testi-card {
+  width: clamp(320px, 28vw, 420px);
+  flex-shrink: 0;
+  background: var(--clr-parchment);
+  border: 1px solid var(--clr-charcoal-10);
+  padding: clamp(1.75rem, 3vw, 2.5rem);
+  border-radius: 24px;
+  box-shadow: 0 4px 20px rgba(26,25,22,0.03);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform var(--tr-normal), box-shadow var(--tr-normal), border-color var(--tr-normal);
+  cursor: grab;
+}
+.testi-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 36px rgba(26,25,22,0.08);
+  border-color: var(--clr-gold-light);
+}
+.testi-card__stars {
+  display: flex;
+  gap: 4px;
+  color: #F59E0B;
+  font-size: 1.15rem;
+  margin-bottom: 1.25rem;
+}
+.testi-card__quote {
+  font-family: var(--ff-serif);
+  font-size: clamp(1.1rem, 1.4vw, 1.25rem);
+  line-height: 1.6;
+  color: var(--clr-charcoal);
+  font-style: italic;
+  margin-bottom: 2rem;
+  flex-grow: 1;
+}
+.testi-card__author {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border-top: 1px solid var(--clr-charcoal-10);
+  padding-top: 1.25rem;
+}
+.testi-card__avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--clr-charcoal);
+  color: var(--clr-gold);
+  font-family: var(--ff-sans-display);
+  font-size: var(--fs-xs);
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 0.05em;
+  border: 1px solid rgba(184,148,90,0.3);
+  flex-shrink: 0;
+}
+.testi-card__name {
+  font-family: var(--ff-sans-display);
+  font-size: var(--fs-sm);
+  font-weight: 700;
+  color: var(--clr-charcoal);
+  letter-spacing: 0.04em;
+  margin-bottom: 0.2rem;
+}
+.testi-card__role {
+  font-size: var(--fs-xs);
+  color: var(--clr-warm-gray);
+  letter-spacing: 0.02em;
+}
+
+@media (max-width: 768px) {
+  .testimonials-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .testi-card {
+    width: 300px;
+  }
+}
