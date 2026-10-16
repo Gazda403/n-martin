@@ -15,7 +15,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;0,900;1,400;1,600;1,700;1,800&family=Syne:wght@400;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 
   <!-- Favicon: M for Maestro -->
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%231A1714'/><text x='50%25' y='55%25' dominant-baseline='middle' text-anchor='middle' fill='%23C9A96E' font-family='serif' font-size='14' font-weight='bold'>M</text></svg>" />
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="apple-touch-icon" href="favicon.png" /><rect width='32' height='32' fill='%231A1714'/><text x='50%25' y='55%25' dominant-baseline='middle' text-anchor='middle' fill='%23C9A96E' font-family='serif' font-size='14' font-weight='bold'>M</text></svg>" />
 
   <link rel="stylesheet" href="style.css?v=21" />
 
@@ -47,6 +48,41 @@
     .hero-card__img { object-position: center center; }
     .footer__logo { letter-spacing: 0.35em; font-size: 1.6rem; }
     .image-break__word { font-size: clamp(4rem, 12vw, 11rem); }
+
+    
+    /* ── LOGO STYLES ── */
+    .nav__logo {
+      display: inline-flex;
+      align-items: center;
+      text-decoration: none;
+    }
+    .nav__logo-img {
+      height: clamp(34px, 4vw, 44px);
+      width: auto;
+      object-fit: contain;
+      display: block;
+      transition: opacity var(--tr-fast), transform var(--tr-fast);
+    }
+    .nav__logo-img--light {
+      display: none;
+    }
+    .nav.scrolled .nav__logo-img--dark {
+      display: none;
+    }
+    .nav.scrolled .nav__logo-img--light {
+      display: block;
+    }
+    .footer__logo-img {
+      height: 48px;
+      width: auto;
+      object-fit: contain;
+      display: block;
+      margin-bottom: 0.85rem;
+    }
+    .footer__logo {
+      letter-spacing: normal;
+      font-size: 1rem;
+    }
 
     /* ── RECENZIJE / TESTIMONIALS CAROUSEL ── */
     .testimonials-section {
@@ -258,7 +294,8 @@
   <!-- NAVIGACIJA -->
   <nav class="nav" id="nav">
     <a href="#" class="nav__logo" aria-label="MAESTRO Namjestaj Pocetna">
-      <span class="nav__logo-n">MAESTRO</span><span class="nav__logo-dash" style="color:var(--clr-gold);margin:0 0.1em">&middot;</span><span class="nav__logo-martin">NAMJESTAJ</span>
+      <img src="images/maestro/logo.png" alt="MAESTRO namjestaj" class="nav__logo-img nav__logo-img--dark" />
+      <img src="images/maestro/logo-white.png" alt="MAESTRO namjestaj" class="nav__logo-img nav__logo-img--light" />
     </a>
     <div class="nav__meta">
       <span class="nav__location">Namjestaj po Mjeri &middot; Banja Luka &middot; Od 2009.</span>
@@ -1111,7 +1148,9 @@
     <div class="container">
       <div class="footer__grid">
         <div class="footer__brand">
-          <div class="footer__logo">MAESTRO</div>
+          <div class="footer__logo">
+          <img src="images/maestro/logo-white.png" alt="MAESTRO namjestaj" class="footer__logo-img" />
+        </div>
           <p class="footer__tagline">Namjestaj po Mjeri<br />Banja Luka &middot; Bosna i Hercegovina<br />Sladana Mandic s.p.</p>
         </div>
         <div class="footer__nav">
